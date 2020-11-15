@@ -11,6 +11,41 @@
   "eval": {
     "description": "Um terminal no Discord ¯\\_(ツ)_/¯"
   },
+  "steam": {
+    "description": "",
+    "arguments": {
+      "start": "digite o nome do jogo desejado",
+      "retry": "você não digitou o nome do jogo"
+    },
+    "gameNotFound": "não foi possível encontrar algum jogo com este nome!",
+    "unsuccessfully": "não foi possível pegar as informações deste jogo, tente novamente mais tarde!",
+    "free": "gratuito",
+    "current": "R${{current}}",
+    "promotion": "~~R${{original}}~~ R${{current}}",
+    "embed": {
+      "description": "❯ Descrição",
+      "information": {
+        "name": "❯ Informações gerais",
+        "requiredAge": "> **Classificação Etária**: {{data}}",
+        "dlc": "> **Total de DLCs**: {{data}}",
+        "price": "> **Preço**: {{data}}",
+        "releaseDate": "> **Data de lançamento**: {{data}}",
+        "platforms": "> **Plataformas**: {{data}}",
+        "developers": "> **Desenvolvedores**: {{data}}",
+        "score": "**Avaliação**: {{data}}",
+        "site": "**Site**: {{data}}",
+        "recommendations": "**Recomendações**: {{data}}",
+        "achievements": "**Conquistas**: {{data}}",
+        "publishers": "**Editoras**: {{data}}",
+        "genres": "**Gêneros**: {{data}}"
+      },
+      "requirements": {
+        "name": "❯ Requisitos",
+        "minimum": "**Mínimo**:\n{{data}}\n\n",
+        "recommended": "**Recomendado**:\n{{data}}"
+      }
+    }
+  },
   "translate": {
     "description": "Traduza algo para qualquer linguagem",
     "arguments": {
