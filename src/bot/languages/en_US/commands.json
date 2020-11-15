@@ -11,6 +11,15 @@
   "eval": {
     "description": ""
   },
+  "translate": {
+    "description": "",
+    "arguments": {
+      "toStart": "",
+      "toRetry": "",
+      "textStart": "",
+      "textRetry": ""
+    }
+  },
   "avatar": {
     "description": "",
     "embed": ""

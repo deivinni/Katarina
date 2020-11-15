@@ -11,6 +11,21 @@
   "eval": {
     "description": "Um terminal no Discord ¯\\_(ツ)_/¯"
   },
+  "translate": {
+    "description": "",
+    "arguments": {
+      "toStart": "digite para qual idioma que deseja traduzir o texto",
+      "toRetry": "você não digitou o idioma",
+      "textStart": "digite o texto para traduzir",
+      "textRetry": "você não digitou o texto"
+    },
+    "textLen": "seu texto não pode ter mais de `1020` caracteres!",
+    "translateError": "verifique o idioma digitado, utilize a forma simplificada `english` -> `en`!",
+    "embed": {
+      "title": "Google Tradutor",
+      "field": "❯ Original"
+    }
+  },
   "avatar": {
     "description": "Veja o avatar de algum usuário",
     "embed": "[Avatar]({{avatar}}) de {{member}}"
