@@ -1,0 +1,18 @@
+{
+  "ping": {
+    "description": "",
+    "message": ""
+  },
+  "cowboy": {
+    "description": "",
+    "argsStart": "",
+    "argsRetry": ""
+  },
+  "eval": {
+    "description": ""
+  },
+  "avatar": {
+    "description": "",
+    "embed": ""
+  }
+}

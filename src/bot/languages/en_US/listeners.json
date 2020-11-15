@@ -1,0 +1,10 @@
+{
+  "commandHandler": {
+    "arguments": {
+      "startAndRetry": "",
+      "timeout": "",
+      "ended": "",
+      "cancel": ""
+    }
+  }
+}

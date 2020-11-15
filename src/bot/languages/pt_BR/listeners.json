@@ -1,0 +1,11 @@
+{
+  "commandHandler": {
+    "arguments": {
+      "start": "ou digite `cancel` para finalizar o comando!",
+      "retry": "tente novamente!",
+      "timeout": "você demorou muito tempo, então o comando foi finalizado!",
+      "ended": "você chegou no limite de tentativas, então o comando foi finalizado!",
+      "cancel": "você cancelou o comando!"
+    }
+  }
+}

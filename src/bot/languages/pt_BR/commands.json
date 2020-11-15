@@ -1,0 +1,18 @@
+{
+  "ping": {
+    "description": "Veja o tempo de resposta da API do Discord",
+    "message": "minha latência é `{{time}}`ms!"
+  },
+  "cowboy": {
+    "description": "Crie um cowboy com emojis personalizados",
+    "argsStart": "mencione algum emoji personalizado deste servidor",
+    "argsRetry": "você não mencionou o emoji personalizado deste servidor"
+  },
+  "eval": {
+    "description": "Um terminal no Discord ¯\\_(ツ)_/¯"
+  },
+  "avatar": {
+    "description": "Veja o avatar de algum usuário",
+    "embed": "[Avatar]({{avatar}}) de {{member}}"
+  }
+}
