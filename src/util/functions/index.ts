@@ -5,4 +5,3 @@ export { Logger } from './Logger';
 export { capitalize } from './Capitalize';
 export { formatNumber } from './formatNumber';
 export { shortenerText } from './shortenerText';
-export { I18next } from './I18next';

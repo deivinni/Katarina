@@ -23,6 +23,7 @@
     "@types/i18next-fs-backend": "^1.0.0",
     "@types/intl": "^1.2.0",
     "@types/node": "^14.14.7",
+    "axios": "^0.21.0",
     "chalk": "^4.1.0",
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.4.1",

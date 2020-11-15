@@ -3,7 +3,8 @@ import { Message, Intents } from 'discord.js';
 import { join } from 'path';
 
 import * as _config from '../../util/config';
-import { Logger, I18next } from '../../util/functions';
+import { Logger } from '../../util/functions';
+import { I18next } from '../../util/wrappers';
 
 export default class KatarinaClient extends AkairoClient {
   public config!: IClientConfig;
