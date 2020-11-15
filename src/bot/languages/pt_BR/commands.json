@@ -12,7 +12,7 @@
     "description": "Um terminal no Discord ¯\\_(ツ)_/¯"
   },
   "translate": {
-    "description": "",
+    "description": "Traduza algo para qualquer linguagem",
     "arguments": {
       "toStart": "digite para qual idioma que deseja traduzir o texto",
       "toRetry": "você não digitou o idioma",

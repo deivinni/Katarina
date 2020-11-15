@@ -8,6 +8,11 @@ export default class TranslateCommand extends Command {
     super('translate', {
       aliases: ['translate', 'trans'],
       category: 'search',
+      description: {
+        content: 'commands:translate.description',
+        usage: 'translate <language> <text>',
+        examples: ['translate pt hello', 'translate en olá'],
+      },
       args: [{
         id: 'to',
         type: 'string',
