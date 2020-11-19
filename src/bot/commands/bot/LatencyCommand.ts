@@ -18,7 +18,7 @@ export default class LatencyCommand extends Command {
 
   public exec(message: Message): Promise<Message> {
     return message.util?.reply(
-      this.client.i18n.t('commands:ping.messageContent', {
+      this.client.i18n.t('commands:ping.message', {
         time: Math.floor(this.client.ws.ping),
       }),
     );

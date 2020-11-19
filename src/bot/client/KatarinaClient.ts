@@ -1,6 +1,7 @@
 import { AkairoClient, CommandHandler, ListenerHandler } from 'discord-akairo';
 import { Message, Intents } from 'discord.js';
 import { join } from 'path';
+import * as dagpi from 'dagpijs';
 
 import * as _config from '../../util/config';
 import { Logger } from '../../util/functions';
@@ -10,6 +11,7 @@ export default class KatarinaClient extends AkairoClient {
   public config!: IClientConfig;
   public logger!: Logger;
   public i18n!: I18next;
+  public dagpi!: dagpi.Client;
   public constructor(config: IClientConfig) {
     super({
       ownerID: _config.owner,
@@ -22,6 +24,7 @@ export default class KatarinaClient extends AkairoClient {
     this.config = config;
     this.logger = new Logger();
     this.i18n = new I18next(this);
+    this.dagpi = new dagpi.Client(process.env.DAGPI);
   }
 
   public _init(): Promise<string> {
@@ -71,6 +74,7 @@ declare module 'discord-akairo' {
     logger: Logger;
     config: IClientConfig;
     i18n: I18next;
+    dagpi: dagpi.Client;
   }
 }
 
