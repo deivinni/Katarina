@@ -3,7 +3,7 @@ import { Message, Snowflake } from 'discord.js';
 import { inspect } from 'util';
 import { VultrexHaste } from 'vultrex.haste';
 
-const haste = new VultrexHaste({ url: 'https://hastebin.com' });
+const { post } = new VultrexHaste({ url: 'https://hastebin.com' });
 
 export default class EvalCommand extends Command {
   public constructor() {
@@ -36,18 +36,23 @@ export default class EvalCommand extends Command {
     code = code
       .replace(/^`{3}(js)?|`{3}$/g, '')
       .replace(/<@!?(\d{16,18})>/g, '_user($1)');
-    let result: string = '';
+    const result: { message: string; code: string } = { message: '', code: '' };
 
     try {
-      result = inspect(eval(code), { depth: 0 }); // eslint-disable-line no-eval
+      result.message = inspect(eval(code), { depth: 0 }); // eslint-disable-line no-eval
+      result.code = 'js';
     } catch (error) {
-      result = String(error);
+      result.message = String(error);
+      result.code = 'xl';
     }
 
-    result.replace(new RegExp(this.client.token, 'gi'), '#####');
+    result.message.replace(new RegExp(this.client.token, 'gi'), '#####');
 
     return message.channel
-      .send(result.length > 1950 ? String(await haste.post(result)) : result, { code: 'js' })
+      .send(
+        result.message.length > 1950 ? String(await post(result.message)) : result,
+        { code: result.code },
+      )
       .catch((err) => message.channel.send(err, { code: 'xl' }));
   }
 }
