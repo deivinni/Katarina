@@ -7,18 +7,5 @@
       "ended": "",
       "cancel": ""
     }
-  },
-  "music": {
-    "queueEnd": "",
-    "trackStart": {
-      "embed": {
-        "author": "",
-        "description": {
-          "author": "",
-          "duration": "",
-          "requester": ""
-        }
-      }
-    }
   }
 }

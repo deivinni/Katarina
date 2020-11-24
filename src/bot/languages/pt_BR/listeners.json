@@ -7,18 +7,5 @@
       "ended": "você chegou no limite de tentativas, então o comando foi finalizado!",
       "cancel": "você cancelou o comando!"
     }
-  },
-  "music": {
-    "queueEnd": "<:Wave:656829704950775808> | A fila de reprodução acabou, estou me desconectando!",
-    "trackStart": {
-      "embed": {
-        "author": "Tocando agora!",
-        "description": {
-          "author": "Autor da música: **{{data}}**",
-          "duration": "Duração: {{data}}",
-          "requester": "Solicitado por: {{data}}"
-        }
-      }
-    }
   }
 }
