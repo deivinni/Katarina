@@ -8,7 +8,7 @@ export default class ObamaCommand extends Command {
       aliases: ['obama'],
       category: 'image',
       description: {
-        content: 'commands:obama.description',
+        content: 'commands:image.obama',
         usage: 'obama [@user]',
         examples: ['obama @Katarina'],
       },

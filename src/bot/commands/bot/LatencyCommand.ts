@@ -7,9 +7,9 @@ export default class LatencyCommand extends Command {
       aliases: ['latency', 'ping'],
       category: 'bot',
       description: {
-        content: 'commands:ping.description',
-        usage: 'ping',
-        examples: ['ping'],
+        content: 'commands:bot.latency.description',
+        usage: 'latency',
+        examples: ['latency'],
       },
       userPermissions: ['SEND_MESSAGES'],
       clientPermissions: ['SEND_MESSAGES'],
@@ -18,7 +18,7 @@ export default class LatencyCommand extends Command {
 
   public exec(message: Message): Promise<Message> {
     return message.util?.reply(
-      this.client.i18n.t('commands:ping.message', {
+      this.client.i18n.t('commands:bot.latency.message', {
         time: Math.floor(this.client.ws.ping),
       }),
     );

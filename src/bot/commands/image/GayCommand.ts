@@ -8,7 +8,7 @@ export default class GayCommand extends Command {
       aliases: ['gay'],
       category: 'image',
       description: {
-        content: 'commands:gay.description',
+        content: 'commands:image.gay',
         usage: 'gay [@user]',
         examples: ['gay @Katarina'],
       },

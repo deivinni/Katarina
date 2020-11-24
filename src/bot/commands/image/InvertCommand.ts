@@ -8,7 +8,7 @@ export default class invertCommand extends Command {
       aliases: ['invert'],
       category: 'image',
       description: {
-        content: 'commands:invert.description',
+        content: 'commands:image.invert',
         usage: 'invert [@user]',
         examples: ['invert @Katarina'],
       },

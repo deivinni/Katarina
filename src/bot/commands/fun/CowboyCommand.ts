@@ -7,7 +7,7 @@ export default class CowboyCommand extends Command {
       aliases: ['cowboy'],
       category: 'fun',
       description: {
-        content: 'commands:cowboy.description',
+        content: 'commands:fun.cowboy.description',
         usage: 'cowboy <emoji>',
         examples: ['cowboy <:PepoHappy:619647854146879501>'],
       },

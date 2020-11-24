@@ -8,7 +8,7 @@ export default class JailCommand extends Command {
       aliases: ['jail'],
       category: 'image',
       description: {
-        content: 'commands:jail.description',
+        content: 'commands:image.jail',
         usage: 'jail [@user]',
         examples: ['jail @Katarina'],
       },

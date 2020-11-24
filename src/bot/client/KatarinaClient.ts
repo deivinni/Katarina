@@ -8,10 +8,6 @@ import { Logger } from '../../util/functions';
 import { I18next } from '../../util/wrappers';
 
 export default class KatarinaClient extends AkairoClient {
-  public config!: IClientConfig;
-  public logger!: Logger;
-  public i18n!: I18next;
-  public dagpi!: dagpi.Client;
   public constructor(config: IClientConfig) {
     super({
       ownerID: _config.owner,
@@ -80,8 +76,8 @@ declare module 'discord-akairo' {
 
 interface IClientConfig {
   token: string;
-  prefix: string | string[];
-  owner: string | string[];
+  prefix: string | Array<string>;
+  owner: string | Array<string>;
   channelIDs: {
     missingTranslation: string;
     readyLogs: string;

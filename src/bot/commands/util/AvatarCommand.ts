@@ -5,19 +5,21 @@ import { KatarinaEmbed } from '../../../util/functions';
 export default class AvatarCommand extends Command {
   public constructor() {
     super('avatar', {
-      aliases: ['avatar'],
-      category: 'utilidade',
+      aliases: ['avatar', 'pic'],
+      category: 'util',
       description: {
-        content: 'commands:avatar.description',
+        content: 'commands:util.avatar.description',
         usage: 'avatar @user',
-        example: ['avatar @Katarina'],
+        examples: ['avatar @Katarina'],
       },
-      args: [{
-        id: 'member',
-        type: 'member',
-        match: 'rest',
-        default: (message: Message) => message.member,
-      }],
+      args: [
+        {
+          id: 'member',
+          type: 'member',
+          match: 'rest',
+          default: (message: Message) => message.member,
+        },
+      ],
       ratelimit: 3,
       userPermissions: ['SEND_MESSAGES'],
       clientPermissions: ['SEND_MESSAGES'],
@@ -29,7 +31,7 @@ export default class AvatarCommand extends Command {
 
     return message.channel.send(
       new KatarinaEmbed(message.author)
-        .setDescription(this.client.i18n.t('commands:avatar.embed', { avatar, member: `${member}` }))
+        .setDescription(this.client.i18n.t('commands:util.avatar.embed', { avatar, member: `${member}` }))
         .setImage(avatar),
     );
   }

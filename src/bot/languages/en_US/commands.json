@@ -1,27 +1,132 @@
 {
-  "ping": {
-    "description": "",
-    "message": ""
-  },
-  "cowboy": {
-    "description": "",
-    "argsStart": "",
-    "argsRetry": ""
-  },
-  "eval": {
-    "description": ""
-  },
-  "translate": {
-    "description": "",
-    "arguments": {
-      "toStart": "",
-      "toRetry": "",
-      "textStart": "",
-      "textRetry": ""
+  "bot": {
+    "help": {
+      "noArguments": {
+        "footer": "",
+        "title": "",
+        "description": ""
+      },
+      "find": {
+        "information": {
+          "name": "",
+          "command": "",
+          "aliases": "",
+          "cooldown": "",
+          "category": "",
+          "rateLimit": ""
+        },
+        "utility": {
+          "name": "",
+          "form": "",
+          "example": ""
+        },
+        "permission": {
+          "name": "",
+          "permissionMember": "",
+          "permissionBot": ""
+        }
+      }
+    },
+    "latency": {
+      "description": "",
+      "message": ""
     }
   },
-  "avatar": {
-    "description": "",
-    "embed": ""
+  "fun": {
+    "cowboy": {
+      "description": "",
+      "argsStart": "",
+      "argsRetry": ""
+    }
+  },
+  "image": {
+    "5g1g": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      }
+    },
+    "ascii": "",
+    "blur": "",
+    "colors": "",
+    "deepfry": "",
+    "gay": "",
+    "invert": "",
+    "jail": "",
+    "magik": "",
+    "obama": "",
+    "paint": "",
+    "pixel": "",
+    "triggered": "",
+    "wasted": "",
+    "whyareyougay": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      }
+    }
+  },
+  "owner": {
+    "eval": ""
+  },
+  "search": {
+    "steam": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "gameNotFound": "",
+      "unsuccessfully": "",
+      "free": "",
+      "current": "",
+      "promotion": "",
+      "embed": {
+        "description": "",
+        "information": {
+          "name": "",
+          "requiredAge": "",
+          "dlc": "",
+          "price": "",
+          "releaseDate": "",
+          "platforms": "",
+          "developers": "",
+          "score": "",
+          "site": "",
+          "recommendations": "",
+          "achievements": "",
+          "publishers": "",
+          "genres": ""
+        },
+        "requirements": {
+          "name": "",
+          "minimum": "",
+          "recommended": ""
+        }
+      }
+    }
+  },
+  "util": {
+    "translate": {
+      "description": "",
+      "arguments": {
+        "toStart": "",
+        "toRetry": "",
+        "textStart": "",
+        "textRetry": ""
+      },
+      "textLen": "",
+      "translateError": "",
+      "embed": {
+        "title": "",
+        "field": ""
+      }
+    },
+    "avatar": {
+      "description": "",
+      "embed": ""
+    }
   }
 }

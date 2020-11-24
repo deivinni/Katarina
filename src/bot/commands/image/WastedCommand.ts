@@ -8,7 +8,7 @@ export default class WastedCommand extends Command {
       aliases: ['wasted'],
       category: 'image',
       description: {
-        content: 'commands:wasted.description',
+        content: 'commands:image.wasted',
         usage: 'wasted [@user]',
         examples: ['wasted', 'wasted @Katarina'],
       },

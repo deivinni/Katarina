@@ -8,7 +8,7 @@ export default class TriggeredCommand extends Command {
       aliases: ['triggered'],
       category: 'image',
       description: {
-        content: 'commands:triggered.description',
+        content: 'commands:image.triggered',
         usage: 'triggered [@user]',
         examples: ['triggered', 'triggered @Katarina'],
       },

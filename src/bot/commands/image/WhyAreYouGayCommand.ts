@@ -8,7 +8,7 @@ export default class WhyAreYouGayCommand extends Command {
       aliases: ['whyareyougay'],
       category: 'image',
       description: {
-        content: 'commands:whyareyougay.description',
+        content: 'commands:image.whyareyougay.description',
         usage: 'whyareyougay <@user>',
         examples: ['whyareyougay @Katarina'],
       },
@@ -18,8 +18,8 @@ export default class WhyAreYouGayCommand extends Command {
           type: 'user',
           match: 'rest',
           prompt: {
-            start: 'commands:whyareyougay.arguments.start',
-            retry: 'commands:whyareyougay.arguments.retry',
+            start: 'commands:image.whyareyougay.arguments.start',
+            retry: 'commands:image.whyareyougay.arguments.retry',
           },
         },
       ],

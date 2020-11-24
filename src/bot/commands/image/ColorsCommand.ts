@@ -8,7 +8,7 @@ export default class ColorsCommand extends Command {
       aliases: ['colors'],
       category: 'image',
       description: {
-        content: 'commands:colors.description',
+        content: 'commands:image.colors',
         usage: 'colors [@user]',
         examples: ['colors @Katarina'],
       },

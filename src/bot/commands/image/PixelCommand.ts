@@ -8,7 +8,7 @@ export default class PixelCommand extends Command {
       aliases: ['pixel'],
       category: 'image',
       description: {
-        content: 'commands:pixel.description',
+        content: 'commands:image.pixel',
         usage: 'pixel [@user]',
         examples: ['pixel', 'pixel @Katarina'],
       },

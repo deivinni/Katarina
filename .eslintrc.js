@@ -29,5 +29,6 @@ module.exports = {
     'no-console': 0,
     'class-methods-use-this': 0,
     camelcase: 0,
+    'function-paren-newline': 0,
   },
 };

@@ -8,7 +8,7 @@ export default class DeepfryCommand extends Command {
       aliases: ['deepfry'],
       category: 'image',
       description: {
-        content: 'commands:deepfry.description',
+        content: 'commands:image.deepfry',
         usage: 'deepfry [@user]',
         examples: ['deepfry @Katarina'],
       },

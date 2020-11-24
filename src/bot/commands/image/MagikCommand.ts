@@ -8,7 +8,7 @@ export default class MagikCommand extends Command {
       aliases: ['magik'],
       category: 'image',
       description: {
-        content: 'commands:magik.description',
+        content: 'commands:image.magik',
         usage: 'magik [@user]',
         examples: ['magik @Katarina'],
       },

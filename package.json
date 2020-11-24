@@ -34,10 +34,12 @@
     "i18next-fs-backend": "^1.0.7",
     "intl": "^1.2.5",
     "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
     "path": "^0.12.7",
     "vultrex.haste": "^1.0.1"
   },
   "devDependencies": {
+    "@types/moment-duration-format": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "eslint": "^7.13.0",

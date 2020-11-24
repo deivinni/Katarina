@@ -1,9 +1,9 @@
-start.bat
 .eslintignore
 .npmrc
-dist/
 .git/
 .vscode/
+dist/
+start.bat
 
 # Logs
 logs

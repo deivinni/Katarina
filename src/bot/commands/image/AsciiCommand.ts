@@ -8,7 +8,7 @@ export default class AsciiCommand extends Command {
       aliases: ['ascii'],
       category: 'image',
       description: {
-        content: 'commands:ascii.description',
+        content: 'commands:image.ascii',
         usage: 'ascii [@user]',
         examples: ['ascii @Katarina'],
       },

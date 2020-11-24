@@ -11,9 +11,9 @@ export default class EvalCommand extends Command {
       aliases: ['eval', 'e'],
       category: 'owner',
       description: {
-        content: 'commands:eval.description',
+        content: 'commands:owner.eval',
         usage: 'eval <code>',
-        example: ['eval message.author.tag'],
+        examples: ['eval message.author.tag'],
       },
       ownerOnly: true,
       args: [{

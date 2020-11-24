@@ -8,7 +8,7 @@ export default class FiveGuysOneGirlCommand extends Command {
       aliases: ['5g1g', 'fiveguysonegirl'],
       category: 'image',
       description: {
-        content: 'commands:5g1g.description',
+        content: 'commands:image.5g1g.description',
         usage: '5g1g [@user]',
         examples: ['5g1g @Katarina'],
       },
@@ -18,8 +18,8 @@ export default class FiveGuysOneGirlCommand extends Command {
           type: 'user',
           match: 'rest',
           prompt: {
-            start: 'commands:5g1g.arguments.start',
-            retry: 'commands:5g1g.arguments.retry',
+            start: 'commands:image.5g1g.arguments.start',
+            retry: 'commands:image.5g1g.arguments.retry',
           },
         },
       ],

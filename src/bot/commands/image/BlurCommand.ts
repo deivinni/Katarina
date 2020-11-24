@@ -8,7 +8,7 @@ export default class BlurCommand extends Command {
       aliases: ['blur'],
       category: 'image',
       description: {
-        content: 'commands:blur.description',
+        content: 'commands:image.blur',
         usage: 'blur [@user]',
         examples: ['blur @Katarina'],
       },

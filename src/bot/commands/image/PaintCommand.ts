@@ -8,7 +8,7 @@ export default class PaintCommand extends Command {
       aliases: ['paint'],
       category: 'image',
       description: {
-        content: 'commands:paint.description',
+        content: 'commands:image.paint',
         usage: 'paint [@user]',
         examples: ['paint @Katarina'],
       },
