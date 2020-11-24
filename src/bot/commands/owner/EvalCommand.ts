@@ -50,7 +50,7 @@ export default class EvalCommand extends Command {
 
     return message.channel
       .send(
-        result.message.length > 1950 ? String(await post(result.message)) : result,
+        result.message.length > 1950 ? String(await post(result.message)) : result.message,
         { code: result.code },
       )
       .catch((err) => message.channel.send(err, { code: 'xl' }));
