@@ -17,8 +17,8 @@ export default class CowboyCommand extends Command {
           type: 'emoji',
           match: 'phrase',
           prompt: {
-            start: 'commands:cowboy.argsStart',
-            retry: 'commands:cowboy.argsRetry',
+            start: 'commands:fun.cowboy.arguments.start',
+            retry: 'commands:fun.cowboy.arguments.retry',
           },
         },
       ],

@@ -35,8 +35,10 @@
   "fun": {
     "cowboy": {
       "description": "Crie um cowboy com emojis personalizados",
-      "argsStart": "mencione algum emoji personalizado deste servidor",
-      "argsRetry": "você não mencionou o emoji personalizado deste servidor"
+      "arguments": {
+        "start": "mencione algum emoji personalizado deste servidor",
+        "retry": "você não mencionou o emoji personalizado deste servidor"
+      }
     }
   },
   "image": {
@@ -49,6 +51,14 @@
     },
     "ascii": "Veja o primeiro frame do ser avatar em Ascii",
     "blur": "Veja o seu avatar com blur",
+    "changemymind": {
+      "description": "Change my mind ☕",
+      "arguments": {
+        "start": "digite sua frase",
+        "retry": "você não digitou alguma frase"
+      },
+      "unsuccessfully": "não foi possível gerar a image, tente novamente mais tarde!"
+    },
     "colors": "Veja quais são as cores predominantes do seu avatar",
     "deepfry": "Sature o seu avatar",
     "gay": "Veja o seu avatar sobreposta da bandeira LGBT+",

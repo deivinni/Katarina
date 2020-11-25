@@ -35,8 +35,10 @@
   "fun": {
     "cowboy": {
       "description": "",
-      "argsStart": "",
-      "argsRetry": ""
+      "arguments": {
+        "start": "",
+        "retry": ""
+      }
     }
   },
   "image": {
@@ -49,6 +51,14 @@
     },
     "ascii": "",
     "blur": "",
+    "changemymind": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "unsuccessfully": ""
+    },
     "colors": "",
     "deepfry": "",
     "gay": "",
