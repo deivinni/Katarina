@@ -120,6 +120,17 @@
     }
   },
   "util": {
+    "avatar": {
+      "description": "Veja o avatar de algum usuário",
+      "embed": "[Avatar]({{avatar}}) de {{member}}"
+    },
+    "spotify": {
+      "description": "Veja uma imagem com algumas informações da música",
+      "userBot": "não é possível _bots_ utilizarem o Spotify!",
+      "noListeningSpotify": "{{name}} não esta escutando uma música do Spotify!",
+      "author": "você",
+      "another": "este usuário"
+    },
     "translate": {
       "description": "Traduza algo para qualquer linguagem",
       "arguments": {
@@ -134,10 +145,6 @@
         "title": "Google Tradutor",
         "field": "❯ Original"
       }
-    },
-    "avatar": {
-      "description": "Veja o avatar de algum usuário",
-      "embed": "[Avatar]({{avatar}}) de {{member}}"
     }
   }
 }

@@ -30,11 +30,13 @@ export default class SpotifyCommand extends Command {
   public async exec(message: Message, { user }: { user: User }) {
     if (user.bot) return message.util?.reply(this.client.i18n.t('commands:fun.spotify.userBot'));
 
-    if (!user.presence.activities.find(
-      (status: Activity) => status.type === 'LISTENING' && status.name === 'Spotify')
-    ) {
+    if (!user.presence.activities.find((status: Activity) => status.type === 'LISTENING' && status.name === 'Spotify')) {
       return message.util?.reply(
-        this.client.i18n.t('commands:fun.spotify.noListeningSpotify', { name: user.id === message.author.id ? this.client.i18n.t('commands:fun.spotify.author') : this.client.i18n.t('commands:fun.spotify.another') }),
+        this.client.i18n.t('commands:fun.spotify.noListeningSpotify', {
+          name: user.id === message.author.id
+            ? this.client.i18n.t('commands:fun.spotify.author')
+            : this.client.i18n.t('commands:fun.spotify.another'),
+        }),
       );
     }
 

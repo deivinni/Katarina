@@ -120,6 +120,17 @@
     }
   },
   "util": {
+    "avatar": {
+      "description": "",
+      "embed": ""
+    },
+    "spotify": {
+      "description": "",
+      "userBot": "",
+      "noListeningSpotify": "",
+      "author": "",
+      "another": ""
+    },
     "translate": {
       "description": "",
       "arguments": {
@@ -134,10 +145,6 @@
         "title": "",
         "field": ""
       }
-    },
-    "avatar": {
-      "description": "",
-      "embed": ""
     }
   }
 }
