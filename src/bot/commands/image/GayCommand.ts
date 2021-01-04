@@ -26,7 +26,7 @@ export default class GayCommand extends Command {
   }
 
   public async exec(message: Message, { user }: { user: User }): Promise<Message> {
-    const url = user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 });
+    const url = user.displayAvatarURL({ format: 'png', size: 1024 });
     const { image, format } = await this.client.dagpi.image_process('gay', { url });
 
     return message.util?.send({

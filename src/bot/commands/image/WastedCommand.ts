@@ -1,5 +1,7 @@
 import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
+import Canvas from 'canvas';
+
 import { KatarinaEmbed } from '../../../util/functions';
 
 export default class WastedCommand extends Command {
@@ -26,12 +28,18 @@ export default class WastedCommand extends Command {
   }
 
   public async exec(message: Message, { user }: { user: User }): Promise<Message> {
-    const avatar = user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 });
-    const { image, format } = await this.client.dagpi.image_process('wasted', { url: avatar });
+    const base = await Canvas.loadImage('https://i.imgur.com/ChPmdLq.png');
+    const img = await Canvas.loadImage(user.displayAvatarURL({ format: 'png', size: 1024 }));
+
+    const canvas = Canvas.createCanvas(img.height, img.width);
+    const ctx = canvas.getContext('2d');
+
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(base, 0, 0, canvas.width, canvas.height);
 
     return message.util?.send({
-      embed: new KatarinaEmbed(message.author).setImage(`attachment://wasted.${format}`),
-      files: [{ name: `wasted.${format}`, attachment: image }],
+      embed: new KatarinaEmbed(message.author).setImage('attachment://wasted.png'),
+      files: [{ name: 'wasted.png', attachment: canvas.toBuffer() }],
     });
   }
 }

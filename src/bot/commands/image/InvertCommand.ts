@@ -1,6 +1,8 @@
 import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
+
 import { KatarinaEmbed } from '../../../util/functions';
+import { CanvasWrappers } from '../../../util/wrappers';
 
 export default class invertCommand extends Command {
   public constructor() {
@@ -26,12 +28,14 @@ export default class invertCommand extends Command {
   }
 
   public async exec(message: Message, { user }: { user: User }): Promise<Message> {
-    const avatar = user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 });
-    const { image, format } = await this.client.dagpi.image_process('invert', { url: avatar });
-
     return message.util?.send({
-      embed: new KatarinaEmbed(message.author).setImage(`attachment://invert.${format}`),
-      files: [{ name: `invert.${format}`, attachment: image }],
+      embed: new KatarinaEmbed(message.author).setImage('attachment://invert.png'),
+      files: [
+        {
+          name: 'invert.png',
+          attachment: await CanvasWrappers.invert(user.displayAvatarURL({ format: 'png', size: 1024 })),
+        },
+      ],
     });
   }
 }

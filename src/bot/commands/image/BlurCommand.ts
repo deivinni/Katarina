@@ -1,6 +1,8 @@
 import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
+
 import { KatarinaEmbed } from '../../../util/functions';
+import { CanvasWrappers } from '../../../util/wrappers';
 
 export default class BlurCommand extends Command {
   public constructor() {
@@ -26,12 +28,14 @@ export default class BlurCommand extends Command {
   }
 
   public async exec(message: Message, { user }: { user: User }): Promise<Message> {
-    const url = user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 });
-    const { image, format } = await this.client.dagpi.image_process('blur', { url });
-
     return message.util?.send({
-      embed: new KatarinaEmbed(message.author).setImage(`attachment://blur.${format}`),
-      files: [{ name: `blur.${format}`, attachment: image }],
+      embed: new KatarinaEmbed(message.author).setImage('attachment://blur.png'),
+      files: [
+        {
+          name: 'blur.png',
+          attachment: await CanvasWrappers.blur(user.displayAvatarURL({ format: 'png', size: 1024 })),
+        },
+      ],
     });
   }
 }

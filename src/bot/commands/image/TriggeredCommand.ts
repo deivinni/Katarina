@@ -1,5 +1,8 @@
 import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
+import Canvas from 'canvas';
+import GifEncoder from 'gifencoder';
+
 import { KatarinaEmbed } from '../../../util/functions';
 
 export default class TriggeredCommand extends Command {
@@ -26,12 +29,52 @@ export default class TriggeredCommand extends Command {
   }
 
   public async exec(message: Message, { user }: { user: User }): Promise<Message> {
-    const avatar = user.displayAvatarURL({ format: 'png', size: 1024 });
-    const { image, format } = await this.client.dagpi.image_process('triggered', { url: avatar });
+    const base = await Canvas.loadImage('https://i.imgur.com/3OZdbyy.png');
+    const img = await Canvas.loadImage(user.displayAvatarURL({ format: 'png', size: 1024 }));
+    const gif = new GifEncoder(img.height, img.width);
+
+    gif.start();
+    gif.setRepeat(0);
+    gif.setDelay(15);
+
+    const canvas = Canvas.createCanvas(img.height, img.width);
+    const ctx = canvas.getContext('2d');
+    const BR = 30;
+    const LR = 20;
+
+    let i = 0;
+    while (i < 9) {
+      ctx.clearRect(0, 0, img.height, img.width);
+
+      ctx.drawImage(
+        img,
+        Math.floor(Math.random() * BR) - BR,
+        Math.floor(Math.random() * BR) - BR,
+        img.height + BR,
+        img.height - 54 + BR,
+      );
+
+      ctx.fillStyle = '#FF000033';
+      ctx.fillRect(0, 0, img.height, img.width);
+
+      ctx.drawImage(
+        base,
+        Math.floor(Math.random() * LR) - LR,
+        img.width - 54 + Math.floor(Math.random() * LR) - LR,
+        img.width + LR,
+        54 + LR,
+      );
+
+      gif.addFrame(ctx);
+
+      // eslint-disable-next-line no-plusplus
+      i++;
+    }
+    gif.finish();
 
     return message.util?.send({
-      embed: new KatarinaEmbed(message.author).setImage(`attachment://triggered.${format}`),
-      files: [{ name: `triggered.${format}`, attachment: image }],
+      embed: new KatarinaEmbed(message.author).setImage('attachment://triggered.gif'),
+      files: [{ name: 'triggered.gif', attachment: gif.out.getData() }],
     });
   }
 }
