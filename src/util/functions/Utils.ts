@@ -5,20 +5,6 @@ import 'moment-duration-format';
 
 /* eslint-disable eqeqeq */
 
-export function paginate(items: string[], page = 1, pageLength = 10) {
-  const maxPage = Math.ceil(items.length / pageLength);
-  if (page < 1) page = 1;
-  if (page > maxPage) page = maxPage;
-  const startIndex = (page - 1) * pageLength;
-
-  return {
-    items: items.length > pageLength ? items.slice(startIndex, startIndex + pageLength) : items,
-    page,
-    maxPage,
-    pageLength,
-  };
-}
-
 export function progressBar(percent: number, length = 8) {
   let str = '';
   for (let i = 0; i < length; i++) { // eslint-disable-line no-plusplus
