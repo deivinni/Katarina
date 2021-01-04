@@ -27,15 +27,15 @@ export default class SpotifyCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { user }: { user: User }) {
-    if (user.bot) return message.util?.reply(this.client.i18n.t('commands:fun.spotify.userBot'));
+  public async exec(message: Message, { user }: { user: User }): Promise<void> {
+    if (user.bot) return message.quote(this.client.i18n.t('commands:util.spotify.userBot'));
 
     if (!user.presence.activities.find((status: Activity) => status.type === 'LISTENING' && status.name === 'Spotify')) {
-      return message.util?.reply(
-        this.client.i18n.t('commands:fun.spotify.noListeningSpotify', {
+      return message.quote(
+        this.client.i18n.t('commands:util.spotify.noListeningSpotify', {
           name: user.id === message.author.id
-            ? this.client.i18n.t('commands:fun.spotify.author')
-            : this.client.i18n.t('commands:fun.spotify.another'),
+            ? this.client.i18n.t('commands:util.spotify.author')
+            : this.client.i18n.t('commands:util.spotify.another'),
         }),
       );
     }
@@ -103,7 +103,7 @@ export default class SpotifyCommand extends Command {
     ctx.fillStyle = '#1DB954';
     ctx.fillRect(160, 120, calculateProgress(progress, total), 5);
 
-    return message.util?.send({
+    return message.quote({
       embed: new KatarinaEmbed(message.author).setImage('attachment://spotify.png'),
       files: [
         { name: 'spotify.png', attachment: canvas.toBuffer() },

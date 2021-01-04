@@ -17,10 +17,10 @@ export default class DicksizeCommand extends Command {
     });
   }
 
-  public exec(message: Message): Promise<Message> {
+  public async exec(message: Message): Promise<void> {
     const math = (Number(message.author.id.slice(-3)) % 20) + 1;
 
-    return message.util?.send(new KatarinaEmbed(message.author)
+    return message.quote(new KatarinaEmbed(message.author)
       .setDescription([
         `${math} cm`,
         `8${'='.repeat(math)}D`,

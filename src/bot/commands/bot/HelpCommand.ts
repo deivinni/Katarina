@@ -29,7 +29,7 @@ export default class HelpCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { command }: { command: Command }): Promise<Message> {
+  public async exec(message: Message, { command }: { command: Command }): Promise<void> {
     const embed = new KatarinaEmbed(message.author);
 
     if (!command) {
@@ -54,7 +54,7 @@ export default class HelpCommand extends Command {
       }
       embed.setDescription(this.client.i18n.t('commands:bot.help.noArguments.description', { maxSize, totalPrefixes: `\`${prefix.join('` e `')}\``, prefix: prefix[0] }));
 
-      return message.util?.send(embed);
+      return message.quote(embed);
     }
 
     const emoji = '<:Think:634436345153978379>';
@@ -79,7 +79,7 @@ export default class HelpCommand extends Command {
       this.client.i18n.t('commands:bot.help.find.permissions.permissionBot', { perm: command.clientPermissions ? this.permissions(command.clientPermissions as string[]) : emoji }),
     ], false);
 
-    return message.util?.send(embed);
+    return message.quote(embed);
   }
 
   private permissions(permissions: string[]) {

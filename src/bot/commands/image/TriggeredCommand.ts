@@ -28,40 +28,40 @@ export default class TriggeredCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { user }: { user: User }): Promise<Message> {
+  public async exec(message: Message, { user }: { user: User }): Promise<void> {
     const base = await Canvas.loadImage('https://i.imgur.com/3OZdbyy.png');
     const img = await Canvas.loadImage(user.displayAvatarURL({ format: 'png', size: 1024 }));
-    const gif = new GifEncoder(img.height, img.width);
+    const gif = new GifEncoder(img.width, img.height);
 
     gif.start();
     gif.setRepeat(0);
     gif.setDelay(15);
 
-    const canvas = Canvas.createCanvas(img.height, img.width);
+    const canvas = Canvas.createCanvas(img.width, img.height);
     const ctx = canvas.getContext('2d');
     const BR = 30;
     const LR = 20;
 
     let i = 0;
     while (i < 9) {
-      ctx.clearRect(0, 0, img.height, img.width);
+      ctx.clearRect(0, 0, img.width, img.height);
 
       ctx.drawImage(
         img,
         Math.floor(Math.random() * BR) - BR,
         Math.floor(Math.random() * BR) - BR,
-        img.height + BR,
-        img.height - 54 + BR,
+        img.width + BR,
+        img.width - 54 + BR,
       );
 
       ctx.fillStyle = '#FF000033';
-      ctx.fillRect(0, 0, img.height, img.width);
+      ctx.fillRect(0, 0, img.width, img.height);
 
       ctx.drawImage(
         base,
         Math.floor(Math.random() * LR) - LR,
-        img.width - 54 + Math.floor(Math.random() * LR) - LR,
-        img.width + LR,
+        img.height - 54 + Math.floor(Math.random() * LR) - LR,
+        img.height + LR,
         54 + LR,
       );
 
@@ -72,7 +72,7 @@ export default class TriggeredCommand extends Command {
     }
     gif.finish();
 
-    return message.util?.send({
+    return message.quote({
       embed: new KatarinaEmbed(message.author).setImage('attachment://triggered.gif'),
       files: [{ name: 'triggered.gif', attachment: gif.out.getData() }],
     });

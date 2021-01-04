@@ -25,11 +25,11 @@ export default class DeepfryCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { user }: { user: User }): Promise<Message> {
+  public async exec(message: Message, { user }: { user: User }): Promise<void> {
     const url = user.displayAvatarURL({ format: 'png', size: 1024 });
     const { image, format } = await this.client.dagpi.image_process('deepfry', { url });
 
-    return message.util?.send({
+    return message.quote({
       embed: new KatarinaEmbed(message.author).setImage(`attachment://deepfry.${format}`),
       files: [{ name: `deepfry.${format}`, attachment: image }],
     });

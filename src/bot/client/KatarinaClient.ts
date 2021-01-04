@@ -7,6 +7,10 @@ import * as _config from '../../util/config';
 import { Logger } from '../../util/functions';
 import { I18next } from '../../util/wrappers';
 
+import { MessageStructuresExtend } from '../../util/wrappers/MessageQuote';
+
+/* eslint-disable no-unused-vars */
+
 export default class KatarinaClient extends AkairoClient {
   public constructor(config: IClientConfig) {
     super({
@@ -33,6 +37,8 @@ export default class KatarinaClient extends AkairoClient {
 
     this.commandHandler.loadAll();
     this.listenerHandler.loadAll();
+
+    MessageStructuresExtend();
 
     return super.login(_config.token);
   }
@@ -63,8 +69,14 @@ export default class KatarinaClient extends AkairoClient {
   });
 }
 
+declare module 'discord.js' {
+  interface Message {
+    quote(content: any, options?: any): void
+  }
+}
+
 declare module 'discord-akairo' {
-  interface AkairoClient { // eslint-disable-line no-unused-vars
+  interface AkairoClient {
     listenerHandler: ListenerHandler;
     commandHandler: CommandHandler;
     logger: Logger;

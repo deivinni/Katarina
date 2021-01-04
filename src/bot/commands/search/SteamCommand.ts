@@ -30,15 +30,15 @@ export default class SteamCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { game }: { game: string }): Promise<Message> {
+  public async exec(message: Message, { game }: { game: string }): Promise<void> {
     const { data } = await axios('https://store.steampowered.com/api/storesearch', { params: { l: 'pt', cc: 'br', term: game } });
 
-    if (data.total === 0) return message.util.reply(this.client.i18n.t('commands:search.steam.gameNotFound'));
+    if (data.total === 0) return message.quote(this.client.i18n.t('commands:search.steam.gameNotFound'));
 
     let { data: body } = await axios('https://store.steampowered.com/api/appdetails', { params: { appids: data.items[0].id, l: 'pt', cc: 'br' } });
     body = body[`${data.items[0].id}`];
 
-    if (!body.success) return message.util.reply(this.client.i18n.t('commands:search.steam.unsuccessfully'));
+    if (!body.success) return message.quote(this.client.i18n.t('commands:search.steam.unsuccessfully'));
 
     const current = body.data.price_overview ? formatNumber(body.data.price_overview.final / 100) : this.client.i18n.t('commands:search.steam.free');
     const original = body.data.price_overview ? formatNumber(body.data.price_overview.initial / 100) : this.client.i18n.t('commands:search.steam.free');
@@ -113,6 +113,6 @@ export default class SteamCommand extends Command {
       embed.addField(this.client.i18n.t('commands:search.steam.embed.requirements.name'), string);
     }
 
-    return message.util.send(embed);
+    return message.quote(embed);
   }
 }

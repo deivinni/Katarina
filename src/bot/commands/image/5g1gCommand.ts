@@ -28,12 +28,12 @@ export default class FiveGuysOneGirlCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { user }: { user: User }): Promise<Message> {
+  public async exec(message: Message, { user }: { user: User }): Promise<void> {
     const url = message.author.displayAvatarURL({ format: 'png', size: 1024 });
     const url2 = user.displayAvatarURL({ format: 'png', size: 1024 });
     const { image, format } = await this.client.dagpi.image_process('5g1g', { url, url2 });
 
-    return message.util?.send({
+    return message.quote({
       embed: new KatarinaEmbed(message.author).setImage(`attachment://5g1g.${format}`),
       files: [{ name: `5g1g.${format}`, attachment: image }],
     });

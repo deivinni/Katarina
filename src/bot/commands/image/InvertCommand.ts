@@ -27,8 +27,8 @@ export default class invertCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { user }: { user: User }): Promise<Message> {
-    return message.util?.send({
+  public async exec(message: Message, { user }: { user: User }): Promise<void> {
+    return message.quote({
       embed: new KatarinaEmbed(message.author).setImage('attachment://invert.png'),
       files: [
         {

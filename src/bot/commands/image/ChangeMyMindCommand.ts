@@ -30,7 +30,7 @@ export default class ChangeMyMindCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { text }: { text: string }): Promise<Message> {
+  public async exec(message: Message, { text }: { text: string }): Promise<void> {
     const base = await Canvas.loadImage('https://i.imgur.com/CJM5Dgs.jpg');
     const canvas = Canvas.createCanvas(base.width, base.height);
     const ctx = canvas.getContext('2d');
@@ -80,7 +80,7 @@ export default class ChangeMyMindCommand extends Command {
       i++;
     }
 
-    return message.util?.send({
+    return message.quote({
       embed: new KatarinaEmbed(message.author).setImage('attachment://changemymind.jpg'),
       files: [{ name: 'changemymind.jpg', attachment: canvas.toBuffer() }],
     });

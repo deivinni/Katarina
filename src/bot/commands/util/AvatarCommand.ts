@@ -26,10 +26,10 @@ export default class AvatarCommand extends Command {
     });
   }
 
-  public exec(message: Message, { member }: { member: GuildMember }): Promise<Message> {
+  public async exec(message: Message, { member }: { member: GuildMember }): Promise<void> {
     const avatar = member.user.displayAvatarURL({ format: 'png', size: 2048, dynamic: true });
 
-    return message.channel.send(
+    return message.quote(
       new KatarinaEmbed(message.author)
         .setDescription(this.client.i18n.t('commands:util.avatar.embed', { avatar, member: `${member}` }))
         .setImage(avatar),

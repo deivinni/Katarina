@@ -68,6 +68,13 @@
     "magik": "Veja o seu avatar com os frames distorcidos",
     "obama": "De uma medalha a si mesmo, com o meme do obama",
     "paint": "Veja o seu avatar como se fosse uma pintura",
+    "phub": {
+      "description": "Crie um comentário no PornHub",
+      "arguments": {
+        "start": "digite a mensagem do seu comentário",
+        "retry": "você não digitou a mensagem"
+      }
+    },
     "pixel": "Veja o seu avatar pixelado",
     "triggered": "Veja o seu avatar com o meme \"Triggered\"",
     "wasted": "Veja o seu avatar com o meme \"Wasted\" do GTA 5",

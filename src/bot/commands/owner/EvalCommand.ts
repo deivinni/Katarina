@@ -30,7 +30,7 @@ export default class EvalCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { code }: { code: string }): Promise<Message> {
+  public async exec(message: Message, { code }: { code: string }): Promise<void> {
     // eslint-disable-next-line no-unused-vars, eqeqeq
     const _user = (_id: Snowflake) => this.client.users.cache.find((user) => user.id == _id);
     code = code
@@ -48,11 +48,13 @@ export default class EvalCommand extends Command {
 
     result.message.replace(new RegExp(this.client.token, 'gi'), '#####');
 
-    return message.channel
-      .send(
+    try {
+      return message.quote(
         result.message.length > 1950 ? String(await post(result.message)) : result.message,
         { code: result.code },
-      )
-      .catch((err) => message.channel.send(err, { code: 'xl' }));
+      );
+    } catch (error) {
+      return message.quote(error, { code: 'xl' });
+    }
   }
 }

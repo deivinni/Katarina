@@ -27,8 +27,8 @@ export default class CowboyCommand extends Command {
     });
   }
 
-  public exec(message: Message, { emoji }: { emoji: Emoji }): Promise<Message> {
-    return message.util?.send(
+  public async exec(message: Message, { emoji }: { emoji: Emoji }): Promise<void> {
+    return message.quote(
       [
         '⠀ ⠀ ⠀  🤠',
         '　   000',

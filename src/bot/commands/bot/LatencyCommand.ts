@@ -16,8 +16,8 @@ export default class LatencyCommand extends Command {
     });
   }
 
-  public exec(message: Message): Promise<Message> {
-    return message.util?.reply(
+  public async exec(message: Message): Promise<void> {
+    return message.quote(
       this.client.i18n.t('commands:bot.latency.message', {
         time: Math.floor(this.client.ws.ping),
       }),

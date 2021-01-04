@@ -36,13 +36,13 @@ export default class TranslateCommand extends Command {
     });
   }
 
-  public async exec(message: Message, { to, text }: { to: string, text: string }): Promise<Message> {
-    if (text.length > 1020) return message.util.reply(this.client.i18n.t('commands:util.translate.textLen'));
+  public async exec(message: Message, { to, text }: { to: string, text: string }): Promise<void> {
+    if (text.length > 1020) return message.quote(this.client.i18n.t('commands:util.translate.textLen'));
 
     try {
       const trans = await Translate(text, { to });
 
-      return message.util.send(
+      return message.quote(
         new KatarinaEmbed(message.author)
           .setTitleURL(this.client.i18n.t('commands:util.translate.embed.title') as string, trans.url)
           .setThumbnail('https://i.imgur.com/RBFetrT.gif')
@@ -53,7 +53,7 @@ export default class TranslateCommand extends Command {
           ),
       );
     } catch {
-      return message.util.reply(this.client.i18n.t('commands:util.translate.translateError'));
+      return message.quote(this.client.i18n.t('commands:util.translate.translateError'));
     }
   }
 }
