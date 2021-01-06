@@ -33,12 +33,13 @@ export function MessageStructuresExtend() {
             .resolveFiles();
 
           // @ts-ignore
-          this.client.api.channels[this.channel.id].messages.post({
+          const postMessage = await this.client.api.channels[this.channel.id].messages.post({
             data: { ...parsed, message_reference, allowed_mentions },
             files,
-          })
-            // @ts-ignore
-            .then((d: any) => this.client.actions.MessageCreate.handle(d).message);
+          });
+
+          // @ts-ignore
+          return this.client.actions.MessageCreate.handle(postMessage).message;
         })();
       }
     }
