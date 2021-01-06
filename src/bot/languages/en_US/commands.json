@@ -40,7 +40,25 @@
         "retry": ""
       }
     },
-    "dicksize": ""
+    "dicksize": "",
+    "emojify": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      }
+    },
+    "meme": {
+      "description": "",
+      "embed": ""
+    },
+    "vaporwave": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      }
+    }
   },
   "image": {
     "5g1g": {

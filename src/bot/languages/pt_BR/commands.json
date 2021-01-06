@@ -40,7 +40,25 @@
         "retry": "você não mencionou o emoji personalizado deste servidor"
       }
     },
-    "dicksize": "Veja o tamanho de seu pênis!"
+    "dicksize": "Veja o tamanho de seu pênis!",
+    "emojify": {
+      "description": "Transforme sua mensagem em emojis",
+      "arguments": {
+        "start": "digite a mensagem para transformar em emojis",
+        "retry": "você não digitou a mensagem"
+      }
+    },
+    "meme": {
+      "description": "Veja memes do Ifunny no próprio Discord",
+      "embed": "Link do meme"
+    },
+    "vaporwave": {
+      "description": "Transforme sua mensagem em estilo Vaporwave",
+      "arguments": {
+        "start": "digite a mensagem para transformar em estilo Vaporwave",
+        "retry": "você não digitou a mensagem"
+      }
+    }
   },
   "image": {
     "5g1g": {
