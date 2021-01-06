@@ -22,13 +22,11 @@ export function MessageStructuresExtend() {
         };
         const allowed_mentions = {
           parse: ['users', 'roles', 'everyone'],
-          // replied_user: typeof content === 'object' ? content && +content.mention : options && +options.mention,
           replied_user: true,
+          // replied_user: typeof content === 'object' ? content && +content.mention : options && +options.mention,
         };
 
-        // eslint-disable-next-line no-unexpected-multiline
         return (async () => {
-          // eslint-disable-next-line no-var
           const { data: parsed, files } = await APIMessage
             .create(this.channel, content, options)
             .resolveData()
