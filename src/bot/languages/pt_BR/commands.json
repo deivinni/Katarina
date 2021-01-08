@@ -142,6 +142,37 @@
           "recommended": "**Recomendado**:\n{{data}}"
         }
       }
+    },
+    "myanimelist": {
+      "description": "Veja as informações de um anime",
+      "arguments": {
+        "start": "digite o nome do anime que deseja pesquisar",
+        "retry": "você não digitou o nome do anime"
+      },
+      "embed": {
+        "aired": "Exibido",
+        "rating": "Classificação Indicativa",
+        "genres": "Gêneros",
+        "episodes": "Episódios",
+        "score": "Score",
+        "status": "Status"
+      },
+      "status": {
+        "Currently-Airing": "Em lançamento",
+        "Publishing": "Em lançamento",
+        "Finished-Airing": "Finalizado",
+        "Finished": "Finalizado",
+        "Not-Yet-Aired": "Ainda não foi lançado",
+        "Not-Yet-Published": "Ainda não foi publicado"
+      },
+      "rating": {
+        "G---All-Ages": "Livre",
+        "PG---Children": "Acima dos 10 anos",
+        "PG-13---Teens-13-or-older": "Acima dos 12 anos",
+        "R---17+-(violence-&-profanity)": "Acima dos 14 anos",
+        "R+---Mild-Nudity": "Acima dos 16 anos",
+        "Rx---Hentai": "Acima dos 18 anos"
+      }
     }
   },
   "util": {

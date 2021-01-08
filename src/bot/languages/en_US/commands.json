@@ -135,6 +135,37 @@
           "recommended": ""
         }
       }
+    },
+    "myanimelist": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "embed": {
+        "aired": "",
+        "rating": "",
+        "genres": "",
+        "episodes": "",
+        "score": "",
+        "status": ""
+      },
+      "rating": {
+        "Currently-Airing": "Currently Airing",
+        "Publishing": "Publishing",
+        "Finished-Airing": "Finished Airing",
+        "Finished": "Finished",
+        "Not-Yet-Aired": "Not Yet Aired",
+        "Not-Yet-Published": "Not Yet Published"
+      },
+      "status": {
+        "G---All-Ages": "G - All Ages",
+        "PG---Children": "PG - Children",
+        "PG-13---Teens-13-or-older": "PG-13 - Teens 13 or older",
+        "R---17+-(violence-&-profanity)": "R - 17+ (violence & profanity)",
+        "R+---Mild Nudity": "R+ - Mild Nudity",
+        "Rx---Hentai": "Rx - Hentai"
+      }
     }
   },
   "util": {
