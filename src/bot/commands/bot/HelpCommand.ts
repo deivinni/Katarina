@@ -30,6 +30,7 @@ export default class HelpCommand extends Command {
   }
 
   public async exec(message: Message, { command }: { command: Command }): Promise<void> {
+    const { t } = this.client.i18n;
     const embed = new KatarinaEmbed(message.author);
 
     if (!command) {
@@ -37,7 +38,7 @@ export default class HelpCommand extends Command {
       let maxSize: number = 0;
 
       embed.setAuthor(
-        this.client.i18n.t('commands:bot.help.noArguments.title'),
+        t('commands:bot.help.noArguments.title'),
         message.author.displayAvatarURL({ dynamic: true }),
       );
 
@@ -52,7 +53,7 @@ export default class HelpCommand extends Command {
             .join(', '),
         );
       }
-      embed.setDescription(this.client.i18n.t('commands:bot.help.noArguments.description', { maxSize, totalPrefixes: `\`${prefix.join('` e `')}\``, prefix: prefix[0] }));
+      embed.setDescription(t('commands:bot.help.noArguments.description', { maxSize, totalPrefixes: `\`${prefix.join('` e `')}\``, prefix: prefix[0] }));
 
       return message.quote(embed);
     }
@@ -60,23 +61,23 @@ export default class HelpCommand extends Command {
     const emoji = '<:Think:634436345153978379>';
 
     embed.setAuthor(capitalize(command.id), message.author.displayAvatarURL({ dynamic: true }));
-    embed.setDescription(this.client.i18n.t(`${command.description.content}`) || '\u200b');
-    embed.addField(this.client.i18n.t('commands:bot.help.find.information.name'), [
-      this.client.i18n.t('commands:bot.help.find.information.command', { id: command.id || emoji }),
-      this.client.i18n.t('commands:bot.help.find.information.aliases', { alias: command.aliases.length > 1 ? `\`${command.aliases.slice(1).join('`, `')}\`` : emoji }),
-      this.client.i18n.t('commands:bot.help.find.information.cooldown', { cooldown: moment.duration(command.cooldown).format('`d`[d ]`h`[h ]`m`[m ]`s`[s]') || emoji }),
+    embed.setDescription(t(`${command.description.content}`) || '\u200b');
+    embed.addField(t('commands:bot.help.find.information.name'), [
+      t('commands:bot.help.find.information.command', { id: command.id || emoji }),
+      t('commands:bot.help.find.information.aliases', { alias: command.aliases.length > 1 ? `\`${command.aliases.slice(1).join('`, `')}\`` : emoji }),
+      t('commands:bot.help.find.information.cooldown', { cooldown: moment.duration(command.cooldown).format('`d`[d ]`h`[h ]`m`[m ]`s`[s]') || emoji }),
     ], true);
     embed.addField('\u200b', [
-      this.client.i18n.t('commands:bot.help.find.information.category', { category: command.category || emoji }),
-      this.client.i18n.t('commands:bot.help.find.information.rateLimit', { rateLimit: `\`${command.ratelimit}\`` || emoji }),
+      t('commands:bot.help.find.information.category', { category: command.category || emoji }),
+      t('commands:bot.help.find.information.rateLimit', { rateLimit: `\`${command.ratelimit}\`` || emoji }),
     ], true);
-    embed.addField(this.client.i18n.t('commands:bot.help.find.utility.name'), [
-      this.client.i18n.t('commands:bot.help.find.utility.form', { usage: `**${command.description.usage}**` || emoji }),
-      this.client.i18n.t('commands:bot.help.find.utility.example', { example: `\`${command.description.examples.join('`, `')}\`` || emoji }),
+    embed.addField(t('commands:bot.help.find.utility.name'), [
+      t('commands:bot.help.find.utility.form', { usage: `**${command.description.usage}**` || emoji }),
+      t('commands:bot.help.find.utility.example', { example: `\`${command.description.examples.join('`, `')}\`` || emoji }),
     ], false);
-    embed.addField(this.client.i18n.t('commands:bot.help.find.permissions.name'), [
-      this.client.i18n.t('commands:bot.help.find.permissions.permissionMember', { perm: command.userPermissions ? this.permissions(command.userPermissions as string[]) : emoji }),
-      this.client.i18n.t('commands:bot.help.find.permissions.permissionBot', { perm: command.clientPermissions ? this.permissions(command.clientPermissions as string[]) : emoji }),
+    embed.addField(t('commands:bot.help.find.permissions.name'), [
+      t('commands:bot.help.find.permissions.permissionMember', { perm: command.userPermissions ? this.permissions(command.userPermissions as string[]) : emoji }),
+      t('commands:bot.help.find.permissions.permissionBot', { perm: command.clientPermissions ? this.permissions(command.clientPermissions as string[]) : emoji }),
     ], false);
 
     return message.quote(embed);

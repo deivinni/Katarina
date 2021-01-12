@@ -104,6 +104,45 @@
       }
     }
   },
+  "info": {
+    "userinfo": {
+      "description": "Veja alguma informações básicas de algum usuário",
+      "user-bot": "Você não pode ver as informações de algum bot",
+      "status": {
+        "online": "<:Online:612325153317060623> disponível",
+        "offline": "<:Offline:612325152759480332> invisível",
+        "idle": "<:Idle:612324956390555655> ausente",
+        "dnd": "<:Dnd:612324956025520168> ocupado",
+        "steam": "<:Streaming:612325157213700170> transmitindo"
+      },
+      "badges": {
+        "DISCORD_EMPLOYEE": "<:Staff:612325155108028456>",
+        "PARTNERED_SERVER_OWNER": "<:partner:797977367380230224>",
+        "HYPESQUAD_EVENTS": "<:hypersquadevents:797977299173507103>",
+        "BUGHUNTER_LEVEL_1": "<:BugHunter:612324953752076300>",
+        "HOUSE_BRAVERY": "<:HypesquadBravery:612324956210200586>",
+        "HOUSE_BRILLIANCE": "<:HypesquadBrilliance:612324956394618890>",
+        "HOUSE_BALANCE": "<:HypesquadBalance:612324956147286017>",
+        "EARLY_SUPPORTER": "<:earlysupporter:797977277622386708>",
+        "SYSTEM": "<:system:797977426982338572>",
+        "BUGHUNTER_LEVEL_2": "<:bughunter2:797977257888841818>",
+        "VERIFIED_BOT": "<:verified_bot:797977455134638160>",
+        "VERIFIED_DEVELOPER": "<:verified_developer:797977463963254804>"
+      },
+      "embed-field-information": "<:Seta:617359896379392003> Informações",
+      "embed-tag": "•\u2000Tag: `{{data}}`",
+      "embed-id": "•\u2000ID: `{{data}}`",
+      "embed-nick": "•\u2000Apelido:`{{data}}`",
+      "embed-status": "•\u2000Status: `{{data}}`",
+      "embed-custom_status": "•\u2000Status customizado: `{{data}}`",
+      "embed-field-date": "<:Seta:617359896379392003> Datas",
+      "embed-created": "•\u2000Criação da conta: `{{data}}`",
+      "embed-joined": "•\u2000Entrou no servidor: `{{data}}`",
+      "embed-boost": "•\u2000Impulsionador (deste servidor): `{{data}}`",
+      "embed-field-extra": "<:Seta:617359896379392003> Extra",
+      "embed-highest": "•\u2000Cargo mais alto: `{{data}}`"
+    }
+  },
   "owner": {
     "eval": "Um terminal no Discord ¯\\_(ツ)_/¯"
   },

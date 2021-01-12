@@ -37,23 +37,24 @@ export default class TranslateCommand extends Command {
   }
 
   public async exec(message: Message, { to, text }: { to: string, text: string }): Promise<void> {
-    if (text.length > 1020) return message.quote(this.client.i18n.t('commands:util.translate.textLen'));
+    const { t } = this.client.i18n;
+    if (text.length > 1020) return message.quote(t('commands:util.translate.textLen'));
 
     try {
       const trans = await Translate(text, { to });
 
       return message.quote(
         new KatarinaEmbed(message.author)
-          .setTitleURL(this.client.i18n.t('commands:util.translate.embed.title') as string, trans.url)
+          .setTitleURL(t('commands:util.translate.embed.title') as string, trans.url)
           .setThumbnail('https://i.imgur.com/RBFetrT.gif')
           .setDescription(shortenerText(trans.translated, 2048))
           .addField(
-            this.client.i18n.t('commands:util.translate.embed.field') as string,
+            t('commands:util.translate.embed.field') as string,
             shortenerText(trans.original, 1024),
           ),
       );
     } catch {
-      return message.quote(this.client.i18n.t('commands:util.translate.translateError'));
+      return message.quote(t('commands:util.translate.translateError'));
     }
   }
 }

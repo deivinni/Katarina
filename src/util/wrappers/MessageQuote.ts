@@ -1,16 +1,16 @@
 import {
-  APIMessage, Client, TextChannel, DMChannel, NewsChannel, Structures,
+  APIMessage, Client, TextChannel, DMChannel, NewsChannel, Message, Structures,
 } from 'discord.js';
 
 export function MessageStructuresExtend() {
-  return Structures.extend('Message', (Message) => {
-    class MessageExtend extends Message {
+  return Structures.extend('Message', (_Message) => {
+    class MessageExtend extends _Message {
       // eslint-disable-next-line no-useless-constructor
       public constructor(client: Client, data: object, channel: TextChannel | DMChannel | NewsChannel) {
         super(client, data, channel);
       }
 
-      public quote(content: any, options?: any): Promise<void> {
+      public quote(content: any, options?: any): Promise<(void|Message)> {
         const message_reference = {
           message_id: (
             !!content && !!options

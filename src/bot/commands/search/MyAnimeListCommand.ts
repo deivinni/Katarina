@@ -31,6 +31,7 @@ export default class MyAnimeListCommand extends Command {
   }
 
   public async exec(message: Message, { anime }: { anime: string }): Promise<void> {
+    const { t } = this.client.i18n;
     const data = await MalScraper.getInfoFromName(anime);
     const transDescription = await Translate(data.synopsis.split('\n\n')[0], { to: 'pt', from: 'en' });
     const transGenero = await Translate(data.genres.join(', '), { to: 'pt', from: 'en' });
@@ -45,16 +46,16 @@ export default class MyAnimeListCommand extends Command {
     for (const property of ['aired', 'rating', 'genres', 'episodes', 'score', 'status']) {
       if (property === 'genres' && transGenero) {
         embed.addField(
-          this.client.i18n.t('commands:search.myanimelist.embed.genres'),
+          t('commands:search.myanimelist.embed.genres'),
           transGenero.translated,
         );
       }
 
       if (property !== 'genres' && data[property]) {
         embed.addField(
-          this.client.i18n.t(`commands:search.myanimelist.embed.${property}`),
+          t(`commands:search.myanimelist.embed.${property}`),
           (['rating', 'status'].includes(property)
-            ? this.client.i18n.t(`commands:search.myanimelist.${property}.${data[property].replace(/ /g, '-')}`)
+            ? t(`commands:search.myanimelist.${property}.${data[property].replace(/ /g, '-')}`)
             : data[property].replace('to', 'até')
           ),
           true,

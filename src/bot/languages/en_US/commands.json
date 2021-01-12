@@ -97,6 +97,45 @@
       }
     }
   },
+  "info": {
+    "userinfo": {
+      "description": "",
+      "user-bot": "",
+      "status": {
+        "online": "<:Online:612325153317060623> online",
+        "offline": "<:Offline:612325152759480332> invisible",
+        "idle": "<:Idle:612324956390555655> idle",
+        "dnd": "<:Dnd:612324956025520168> do not disturb",
+        "steam": "<:Streaming:612325157213700170> streaming"
+      },
+      "badges": {
+        "DISCORD_EMPLOYEE": "<:Staff:612325155108028456>",
+        "PARTNERED_SERVER_OWNER": "<:partner:797977367380230224>",
+        "HYPESQUAD_EVENTS": "<:hypersquadevents:797977299173507103>",
+        "BUGHUNTER_LEVEL_1": "<:BugHunter:612324953752076300>",
+        "HOUSE_BRAVERY": "<:HypesquadBravery:612324956210200586>",
+        "HOUSE_BRILLIANCE": "<:HypesquadBrilliance:612324956394618890>",
+        "HOUSE_BALANCE": "<:HypesquadBalance:612324956147286017>",
+        "EARLY_SUPPORTER": "<:earlysupporter:797977277622386708>",
+        "SYSTEM": "<:system:797977426982338572>",
+        "BUGHUNTER_LEVEL_2": "<:bughunter2:797977257888841818>",
+        "VERIFIED_BOT": "<:verified_bot:797977455134638160>",
+        "VERIFIED_DEVELOPER": "<:verified_developer:797977463963254804>"
+      },
+      "embed-field-information": "",
+      "embed-tag": "",
+      "embed-id": "",
+      "embed-nick": "",
+      "embed-status": "",
+      "embed-custom_status": "",
+      "embed-field-date": "",
+      "embed-created": "",
+      "embed-joined": "",
+      "embed-boost": "",
+      "embed-field-extra": "",
+      "embed-highest": ""
+    }
+  },
   "owner": {
     "eval": ""
   },
