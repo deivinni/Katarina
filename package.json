@@ -2,9 +2,9 @@
   "name": "katarina",
   "version": "0.0.1",
   "description": "Um bot para o Discord, simples e fácil, para lhe ajudar em tudo que for necessário!",
-  "main": "src/main.ts",
+  "main": "src/main.js",
   "scripts": {
-    "start": "ts-node .",
+    "start": "tsc && node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
