@@ -4,8 +4,8 @@
   "description": "Um bot para o Discord, simples e fácil, para lhe ajudar em tudo que for necessário!",
   "main": "src/main.js",
   "scripts": {
-    "start": "tsc && node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
