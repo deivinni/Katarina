@@ -30,6 +30,10 @@
     "latency": {
       "description": "",
       "message": ""
+    },
+    "uptime": {
+      "description": "",
+      "message": ""
     }
   },
   "fun": {

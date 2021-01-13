@@ -13,12 +13,12 @@
           "aliases": "> **Aliases**: {{alias}}",
           "cooldown": "> **Cooldown**: {{cooldown}}",
           "category": "**Categoria**: {{category}}",
-          "rateLimit": "**RateLimit**: {{rateLimit}}"
+          "rateLimit": "**RateLimit**: `{{rateLimit}}`"
         },
         "utility": {
           "name": "❯ Utilização",
-          "form": "> **Forma**: {{usage}}",
-          "example": "> **Exemplo**: {{example}}"
+          "form": "> **Forma**: `{{usage}}`",
+          "example": "> **Exemplo**: `{{example}}`"
         },
         "permissions": {
           "name": "❯ Permissões",
@@ -29,23 +29,27 @@
     },
     "latency": {
       "description": "Veja o tempo de resposta da API do Discord",
-      "message": "minha latência é `{{time}}`ms!"
+      "message": "Minha latência é `{{time}}`ms!"
+    },
+    "uptime": {
+      "description": "Veja por quanto tempo eu estou online",
+      "message": "Estou online **{{time}}**!"
     }
   },
   "fun": {
     "cowboy": {
       "description": "Crie um cowboy com emojis personalizados",
       "arguments": {
-        "start": "mencione algum emoji personalizado deste servidor",
-        "retry": "você não mencionou o emoji personalizado deste servidor"
+        "start": "Mencione algum emoji personalizado deste servidor",
+        "retry": "Você não mencionou o emoji personalizado deste servidor"
       }
     },
     "dicksize": "Veja o tamanho de seu pênis!",
     "emojify": {
       "description": "Transforme sua mensagem em emojis",
       "arguments": {
-        "start": "digite a mensagem para transformar em emojis",
-        "retry": "você não digitou a mensagem"
+        "start": "Digite a mensagem para transformar em emojis",
+        "retry": "Você não digitou a mensagem"
       }
     },
     "meme": {
@@ -55,8 +59,8 @@
     "vaporwave": {
       "description": "Transforme sua mensagem em estilo Vaporwave",
       "arguments": {
-        "start": "digite a mensagem para transformar em estilo Vaporwave",
-        "retry": "você não digitou a mensagem"
+        "start": "Digite a mensagem para transformar em estilo Vaporwave",
+        "retry": "Você não digitou a mensagem"
       }
     }
   },
@@ -64,8 +68,8 @@
     "5g1g": {
       "description": "Crie um meme de \"5 homens e 1 garota\" com algum usuário",
       "arguments": {
-        "start": "mencione algum usuário",
-        "retry": "você não mencionou algum usuário"
+        "start": "Mencione algum usuário",
+        "retry": "Você não mencionou algum usuário"
       }
     },
     "ascii": "Veja o primeiro frame do ser avatar em Ascii",
@@ -73,10 +77,10 @@
     "changemymind": {
       "description": "Change my mind ☕",
       "arguments": {
-        "start": "digite sua frase",
-        "retry": "você não digitou alguma frase"
+        "start": "Digite sua frase",
+        "retry": "Você não digitou alguma frase"
       },
-      "unsuccessfully": "não foi possível gerar a image, tente novamente mais tarde!"
+      "unsuccessfully": "Não foi possível gerar a image, tente novamente mais tarde!"
     },
     "colors": "Veja quais são as cores predominantes do seu avatar",
     "deepfry": "Sature o seu avatar",
@@ -89,8 +93,8 @@
     "phub": {
       "description": "Crie um comentário no PornHub",
       "arguments": {
-        "start": "digite a mensagem do seu comentário",
-        "retry": "você não digitou a mensagem"
+        "start": "Digite a mensagem do seu comentário",
+        "retry": "Você não digitou a mensagem"
       }
     },
     "pixel": "Veja o seu avatar pixelado",
@@ -99,8 +103,8 @@
     "whyareyougay": {
       "description": "Crie um meme de \"Why Are You Gay\" com algum usuário",
       "arguments": {
-        "start": "mencione algum usuário",
-        "retry": "você não mencionou algum usuário"
+        "start": "Mencione algum usuário",
+        "retry": "Você não mencionou algum usuário"
       }
     }
   },
@@ -150,11 +154,11 @@
     "steam": {
       "description": "Pesquise e veja as informações de qualquer jogo da Steam",
       "arguments": {
-        "start": "digite o nome do jogo desejado",
-        "retry": "você não digitou o nome do jogo"
+        "start": "Digite o nome do jogo desejado",
+        "retry": "Você não digitou o nome do jogo"
       },
-      "gameNotFound": "não foi possível encontrar algum jogo com este nome!",
-      "unsuccessfully": "não foi possível pegar as informações deste jogo, tente novamente mais tarde!",
+      "gameNotFound": "Não foi possível encontrar algum jogo com este nome!",
+      "unsuccessfully": "Não foi possível pegar as informações deste jogo, tente novamente mais tarde!",
       "free": "gratuito",
       "current": "R${{current}}",
       "promotion": "~~R${{original}}~~ R${{current}}",
@@ -185,8 +189,8 @@
     "myanimelist": {
       "description": "Veja as informações de um anime",
       "arguments": {
-        "start": "digite o nome do anime que deseja pesquisar",
-        "retry": "você não digitou o nome do anime"
+        "start": "Digite o nome do anime que deseja pesquisar",
+        "retry": "Você não digitou o nome do anime"
       },
       "embed": {
         "aired": "Exibido",
@@ -221,7 +225,7 @@
     },
     "spotify": {
       "description": "Veja uma imagem com algumas informações da música",
-      "userBot": "não é possível _bots_ utilizarem o Spotify!",
+      "userBot": "Não é possível _bots_ utilizarem o Spotify!",
       "noListeningSpotify": "{{name}} não esta escutando uma música do Spotify!",
       "author": "você",
       "another": "este usuário"
@@ -229,13 +233,13 @@
     "translate": {
       "description": "Traduza algo para qualquer linguagem",
       "arguments": {
-        "toStart": "digite para qual idioma que deseja traduzir o texto",
-        "toRetry": "você não digitou o idioma",
-        "textStart": "digite o texto para traduzir",
-        "textRetry": "você não digitou o texto"
+        "toStart": "Digite para qual idioma que deseja traduzir o texto",
+        "toRetry": "Você não digitou o idioma",
+        "textStart": "Digite o texto para traduzir",
+        "textRetry": "Você não digitou o texto"
       },
-      "textLen": "seu texto não pode ter mais de `1020` caracteres!",
-      "translateError": "verifique o idioma digitado, utilize a forma simplificada `english` -> `en`!",
+      "textLen": "Seu texto não pode ter mais de `1020` caracteres!",
+      "translateError": "Verifique o idioma digitado, utilize a forma simplificada `english` -> `en`!",
       "embed": {
         "title": "Google Tradutor",
         "field": "❯ Original"

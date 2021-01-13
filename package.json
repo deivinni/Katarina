@@ -28,6 +28,7 @@
     "canvas": "^2.6.1",
     "chalk": "^4.1.0",
     "dagpijs": "^1.0.4",
+    "dayjs": "^1.10.3",
     "discord-akairo": "^8.1.0",
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
@@ -37,14 +38,11 @@
     "i18next-fs-backend": "^1.0.7",
     "intl": "^1.2.5",
     "mal-scraper": "^2.11.2",
-    "moment": "^2.29.1",
-    "moment-duration-format": "^2.3.2",
     "node-canvas-with-twemoji-and-discord-emoji": "^1.1.8",
     "path": "^0.12.7",
     "vultrex.haste": "^1.0.1"
   },
   "devDependencies": {
-    "@types/moment-duration-format": "^2.2.2",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "eslint": "^7.13.0",

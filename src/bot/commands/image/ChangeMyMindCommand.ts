@@ -8,7 +8,7 @@ export default class ChangeMyMindCommand extends Command {
   public constructor() {
     super('changemymind', {
       aliases: ['changemymind', 'cmm'],
-      category: 'fun',
+      category: 'image',
       description: {
         content: 'commands:image.changemymind.description',
         usage: 'changemymind <text>',
