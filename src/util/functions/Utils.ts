@@ -1,7 +1,10 @@
 import emoji from 'node-canvas-with-twemoji-and-discord-emoji';
 import { CanvasRenderingContext2D } from 'canvas';
-import moment from 'moment';
-import 'moment-duration-format';
+
+import DayJS from 'dayjs';
+import DayJSDuration from 'dayjs/plugin/duration';
+
+DayJS.extend(DayJSDuration);
 
 /* eslint-disable eqeqeq */
 
@@ -16,7 +19,7 @@ export function progressBar(percent: number, length = 8) {
 
 export function formatTime(time: number) {
   if (!time) return '00:00';
-  const fmt = moment.duration(time).format('dd:hh:mm:ss');
+  const fmt = DayJS.duration(time).format('dd:hh:mm:ss');
 
   const chunk = fmt.split(':');
   if (chunk.length < 2) chunk.unshift('00');

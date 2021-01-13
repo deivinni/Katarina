@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import moment from 'moment';
+import DayJS from 'dayjs';
 import util from 'util';
 
 export class Logger {
@@ -24,7 +24,7 @@ export class Logger {
   }
 
   public write(content: unknown, { color = 'grey', tag = 'Log', error = false } = {}): void {
-    const timestamp = chalk.cyan(`[${moment().format('YYYY-MM-DD HH:mm:ss')}]:`);
+    const timestamp = chalk.cyan(`[${DayJS().format('YYYY-MM-DD HH:mm:ss')}]:`);
     const levelTag = chalk.bold(`[${tag}]:`);
     const text = chalk[color](this.clean(content));
     const stream = error ? process.stderr : process.stdout;

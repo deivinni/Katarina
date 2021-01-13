@@ -1,5 +1,6 @@
 import { Command } from 'discord-akairo';
 import { Message, Snowflake } from 'discord.js';
+
 import { inspect } from 'util';
 import { VultrexHaste } from 'vultrex.haste';
 

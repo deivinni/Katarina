@@ -1,5 +1,6 @@
 import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
+
 import Canvas from 'canvas';
 import GifEncoder from 'gifencoder';
 

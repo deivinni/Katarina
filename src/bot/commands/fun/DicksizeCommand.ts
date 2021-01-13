@@ -1,5 +1,6 @@
 import { Command } from 'discord-akairo';
 import { Message } from 'discord.js';
+
 import { KatarinaEmbed } from '../../../util/functions';
 
 export default class DicksizeCommand extends Command {

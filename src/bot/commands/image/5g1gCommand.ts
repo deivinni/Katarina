@@ -1,5 +1,6 @@
 import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
+
 import { KatarinaEmbed } from '../../../util/functions';
 
 export default class FiveGuysOneGirlCommand extends Command {

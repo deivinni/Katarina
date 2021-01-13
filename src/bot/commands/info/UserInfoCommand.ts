@@ -3,11 +3,12 @@ import {
   Activity, Message, MessageEmbed, User,
 } from 'discord.js';
 
-import moment from 'moment';
+import DayJS from 'dayjs';
+import 'dayjs/locale/pt-br';
 
 import { shortenerText } from '../../../util/functions';
 
-moment.locale('pt-BR');
+DayJS.locale('pt-br');
 
 export default class UserInfoCommand extends Command {
   public constructor() {
@@ -52,11 +53,11 @@ export default class UserInfoCommand extends Command {
         ),
       ])
       .addField(this.client.i18n.t('commands.info.userinfo.embed-field-date'), [
-        this.client.i18n.t('commands:info.userinfo.embed-created', { data: moment(user.createdAt).format('ll').toLowerCase() }),
-        this.client.i18n.t('commands:info.userinfo.embed-joined', { data: moment(member.joinedAt).format('ll').toLowerCase() }),
+        this.client.i18n.t('commands:info.userinfo.embed-created', { data: DayJS(user.createdAt).format('ll').toLowerCase() }),
+        this.client.i18n.t('commands:info.userinfo.embed-joined', { data: DayJS(member.joinedAt).format('ll').toLowerCase() }),
         (
           member.premiumSince
-            ? this.client.i18n.t('commands:info.userinfo.embed-boost', { data: moment(member.premiumSince).format('ll').toLowerCase() })
+            ? this.client.i18n.t('commands:info.userinfo.embed-boost', { data: DayJS(member.premiumSince).format('ll').toLowerCase() })
             : null
         ),
       ])

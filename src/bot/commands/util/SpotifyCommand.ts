@@ -1,6 +1,7 @@
-import Canvas from 'canvas';
 import { Command } from 'discord-akairo';
 import { Activity, Message, User } from 'discord.js';
+
+import Canvas from 'canvas';
 
 import { Util, KatarinaEmbed, shortenerText } from '../../../util/functions';
 
