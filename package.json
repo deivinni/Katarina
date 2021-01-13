@@ -4,7 +4,7 @@
   "description": "Um bot para o Discord, simples e fácil, para lhe ajudar em tudo que for necessário!",
   "main": "src/main.ts",
   "scripts": {
-    "start": "npm start.bat",
+    "start": "ts-node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
