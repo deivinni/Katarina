@@ -28,7 +28,7 @@ export default class AvatarCommand extends Command {
   }
 
   public async exec(message: Message, { member }: { member: GuildMember }): Promise<void> {
-    const avatar = member.user.displayAvatarURL({ format: 'png', size: 2048, dynamic: true });
+    const avatar = member.user.displayAvatarURL({ format: 'png', size: 4096, dynamic: true });
 
     return message.quote(
       new KatarinaEmbed(message.author)

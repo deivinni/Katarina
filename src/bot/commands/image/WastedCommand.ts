@@ -4,7 +4,7 @@ import { Message, User } from 'discord.js';
 import Canvas from 'canvas';
 
 import { KatarinaEmbed } from '../../../util/functions';
-import { CanvasWrappers } from '../../../util/wrappers';
+import { CanvasWrapper } from '../../../util/wrappers';
 
 export default class WastedCommand extends Command {
   public constructor() {
@@ -38,7 +38,7 @@ export default class WastedCommand extends Command {
 
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    await CanvasWrappers.gray(ctx, img);
+    await CanvasWrapper.gray(ctx, img);
 
     ctx.fillStyle = '#00000033';
     ctx.fillRect(0, 0, canvas.width, canvas.height);

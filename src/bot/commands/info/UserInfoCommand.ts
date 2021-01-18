@@ -4,11 +4,15 @@ import {
 } from 'discord.js';
 
 import DayJS from 'dayjs';
+import DayJSLocalizedFormat from 'dayjs/plugin/localizedFormat';
+import DayJSRelativeTime from 'dayjs/plugin/relativeTime';
 import 'dayjs/locale/pt-br';
 
 import { shortenerText } from '../../../util/functions';
 
 DayJS.locale('pt-br');
+DayJS.extend(DayJSLocalizedFormat);
+DayJS.extend(DayJSRelativeTime);
 
 export default class UserInfoCommand extends Command {
   public constructor() {
@@ -52,17 +56,17 @@ export default class UserInfoCommand extends Command {
             : null
         ),
       ])
-      .addField(this.client.i18n.t('commands.info.userinfo.embed-field-date'), [
-        this.client.i18n.t('commands:info.userinfo.embed-created', { data: DayJS(user.createdAt).format('ll').toLowerCase() }),
-        this.client.i18n.t('commands:info.userinfo.embed-joined', { data: DayJS(member.joinedAt).format('ll').toLowerCase() }),
+      .addField(this.client.i18n.t('commands:info.userinfo.embed-field-date'), [
+        this.client.i18n.t('commands:info.userinfo.embed-created', { data: `\`${DayJS(user.createdAt).format('ll')}\` (\`${DayJS().to(user.createdAt)}\`)` }),
+        this.client.i18n.t('commands:info.userinfo.embed-joined', { data: `\`${DayJS(member.joinedAt).format('ll')}\` (\`${DayJS().to(member.joinedAt)}\`)` }),
         (
           member.premiumSince
-            ? this.client.i18n.t('commands:info.userinfo.embed-boost', { data: DayJS(member.premiumSince).format('ll').toLowerCase() })
+            ? this.client.i18n.t('commands:info.userinfo.embed-boost', { data: `\`${DayJS(member.premiumSince).format('ll')}\` (\`${DayJS().to(member.premiumSince)}\`)` })
             : null
         ),
       ])
       .addField(this.client.i18n.t('commands:info.userinfo.embed-field-extra'), [
-        this.client.i18n.t('commands:info.userinfo.embed-highest', { data: member.roles.highest || '`sem cargo`' }),
+        this.client.i18n.t('commands:info.userinfo.embed-highest', { data: String(member.roles.highest) || '`sem cargo`' }),
         `•\u2000Badges: ${(await user.fetchFlags()).toArray().map((f: string) => this.client.i18n.t(`commands:info.userinfo.badges.${f}`)).join('') || '`nenhum`'}`,
       ]),
     );

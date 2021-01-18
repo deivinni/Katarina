@@ -19,11 +19,12 @@ export function progressBar(percent: number, length = 8) {
 
 export function formatTime(time: number) {
   if (!time) return '00:00';
-  const fmt = DayJS.duration(time).format('dd:hh:mm:ss');
 
-  const chunk = fmt.split(':');
-  if (chunk.length < 2) chunk.unshift('00');
-  return chunk.join(':');
+  const seconds = time / 1000;
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+
+  return `${hours >= 1 ? `${hours}:` : ''}${hours >= 1 ? `0${minutes}`.slice(-2) : minutes}:${`0${Math.floor(seconds % 60)}`.slice(-2)}`;
 }
 
 export function getVolumeIcon(volume: number) {

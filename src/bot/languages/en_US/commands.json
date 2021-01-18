@@ -1,4 +1,38 @@
 {
+  "actions": {
+    "hug": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "message": ""
+    },
+    "kiss": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "message": ""
+    },
+    "pat": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "message": ""
+    },
+    "slap": {
+      "description": "",
+      "arguments": {
+        "start": "",
+        "retry": ""
+      },
+      "message": ""
+    }
+  },
   "bot": {
     "help": {
       "noArguments": {
@@ -124,7 +158,8 @@
         "SYSTEM": "<:system:797977426982338572>",
         "BUGHUNTER_LEVEL_2": "<:bughunter2:797977257888841818>",
         "VERIFIED_BOT": "<:verified_bot:797977455134638160>",
-        "VERIFIED_DEVELOPER": "<:verified_developer:797977463963254804>"
+        "EARLY_VERIFIED_DEVELOPER": "<:verified_developer:797977463963254804>",
+        "VERIFIED_DEVELOPER": ""
       },
       "embed-field-information": "",
       "embed-tag": "",

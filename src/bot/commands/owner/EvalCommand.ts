@@ -4,6 +4,11 @@ import { Message, Snowflake } from 'discord.js';
 import { inspect } from 'util';
 import { VultrexHaste } from 'vultrex.haste';
 
+/* eslint-disable no-unused-vars */
+
+import * as Functions from '../../../util/functions';
+import * as Wrappers from '../../../util/wrappers';
+
 const { post } = new VultrexHaste({ url: 'https://hastebin.com' });
 
 export default class EvalCommand extends Command {
@@ -32,7 +37,7 @@ export default class EvalCommand extends Command {
   }
 
   public async exec(message: Message, { code }: { code: string }): Promise<void> {
-    // eslint-disable-next-line no-unused-vars, eqeqeq
+    // eslint-disable-next-line eqeqeq
     const _user = (_id: Snowflake) => this.client.users.cache.find((user) => user.id == _id);
     code = code
       .replace(/^`{3}(js)?|`{3}$/g, '')

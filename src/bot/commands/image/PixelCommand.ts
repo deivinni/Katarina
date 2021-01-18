@@ -2,7 +2,7 @@ import { Command } from 'discord-akairo';
 import { Message, User } from 'discord.js';
 
 import { KatarinaEmbed } from '../../../util/functions';
-import { CanvasWrappers } from '../../../util/wrappers';
+import { CanvasWrapper } from '../../../util/wrappers';
 
 export default class PixelCommand extends Command {
   public constructor() {
@@ -33,7 +33,7 @@ export default class PixelCommand extends Command {
       files: [
         {
           name: 'pixel.png',
-          attachment: await CanvasWrappers.pixel(user.displayAvatarURL({ format: 'png', size: 1024 })),
+          attachment: await CanvasWrapper.pixel(user.displayAvatarURL({ format: 'png', size: 1024 })),
         },
       ],
     });

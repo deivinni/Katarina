@@ -1,4 +1,38 @@
 {
+  "actions": {
+    "hug": {
+      "description": "Abraçe qualquer pessoa do servidor 😳",
+      "arguments": {
+        "start": "mencione o usuário que você gostaria de abraçar",
+        "retry": "você não mencionou o usuário"
+      },
+      "message": "{{author}} deu um abraço goxtozin em {{member}}"
+    },
+    "kiss": {
+      "description": "Beije alguma pessoa do servidor >/////<",
+      "arguments": {
+        "start": "mencione o usuário que você deseja beijar",
+        "retry": "você não mencionou o usuário"
+      },
+      "message": "{{author}} deu mó beijoca em {{member}} 😳"
+    },
+    "pat": {
+      "description": "Acaricie alguma pessoa do servidor 😳👉👈",
+      "arguments": {
+        "start": "mencione o usuário que você deseja acariciar",
+        "retry": "você não mencionou o usuário"
+      },
+      "message": "{{author}} fez um cafuné em {{member}} >w<"
+    },
+    "slap": {
+      "description": "De um tapa em qualquer pessoa do servidor :D",
+      "arguments": {
+        "start": "mencione o usuário que você gostaria de meter um tapão",
+        "retry": "você não mencionou o usuário"
+      },
+      "message": "{{author}} meteu mó tapão em {{member}}"
+    }
+  },
   "bot": {
     "help": {
       "noArguments": {
@@ -40,16 +74,16 @@
     "cowboy": {
       "description": "Crie um cowboy com emojis personalizados",
       "arguments": {
-        "start": "Mencione algum emoji personalizado deste servidor",
-        "retry": "Você não mencionou o emoji personalizado deste servidor"
+        "start": "mencione algum emoji personalizado deste servidor",
+        "retry": "você não mencionou o emoji personalizado deste servidor"
       }
     },
     "dicksize": "Veja o tamanho de seu pênis!",
     "emojify": {
       "description": "Transforme sua mensagem em emojis",
       "arguments": {
-        "start": "Digite a mensagem para transformar em emojis",
-        "retry": "Você não digitou a mensagem"
+        "start": "digite a mensagem para transformar em emojis",
+        "retry": "você não digitou a mensagem"
       }
     },
     "meme": {
@@ -59,8 +93,8 @@
     "vaporwave": {
       "description": "Transforme sua mensagem em estilo Vaporwave",
       "arguments": {
-        "start": "Digite a mensagem para transformar em estilo Vaporwave",
-        "retry": "Você não digitou a mensagem"
+        "start": "digite a mensagem para transformar em estilo Vaporwave",
+        "retry": "você não digitou a mensagem"
       }
     }
   },
@@ -68,8 +102,8 @@
     "5g1g": {
       "description": "Crie um meme de \"5 homens e 1 garota\" com algum usuário",
       "arguments": {
-        "start": "Mencione algum usuário",
-        "retry": "Você não mencionou algum usuário"
+        "start": "mencione algum usuário",
+        "retry": "você não mencionou algum usuário"
       }
     },
     "ascii": "Veja o primeiro frame do ser avatar em Ascii",
@@ -77,8 +111,8 @@
     "changemymind": {
       "description": "Change my mind ☕",
       "arguments": {
-        "start": "Digite sua frase",
-        "retry": "Você não digitou alguma frase"
+        "start": "digite sua frase",
+        "retry": "você não digitou alguma frase"
       },
       "unsuccessfully": "Não foi possível gerar a image, tente novamente mais tarde!"
     },
@@ -93,8 +127,8 @@
     "phub": {
       "description": "Crie um comentário no PornHub",
       "arguments": {
-        "start": "Digite a mensagem do seu comentário",
-        "retry": "Você não digitou a mensagem"
+        "start": "digite a mensagem do seu comentário",
+        "retry": "você não digitou a mensagem"
       }
     },
     "pixel": "Veja o seu avatar pixelado",
@@ -103,8 +137,8 @@
     "whyareyougay": {
       "description": "Crie um meme de \"Why Are You Gay\" com algum usuário",
       "arguments": {
-        "start": "Mencione algum usuário",
-        "retry": "Você não mencionou algum usuário"
+        "start": "mencione algum usuário",
+        "retry": "você não mencionou algum usuário"
       }
     }
   },
@@ -131,20 +165,20 @@
         "SYSTEM": "<:system:797977426982338572>",
         "BUGHUNTER_LEVEL_2": "<:bughunter2:797977257888841818>",
         "VERIFIED_BOT": "<:verified_bot:797977455134638160>",
-        "VERIFIED_DEVELOPER": "<:verified_developer:797977463963254804>"
+        "EARLY_VERIFIED_DEVELOPER": "<:verified_developer:797977463963254804>",
+        "VERIFIED_DEVELOPER": ""
       },
       "embed-field-information": "<:Seta:617359896379392003> Informações",
       "embed-tag": "•\u2000Tag: `{{data}}`",
       "embed-id": "•\u2000ID: `{{data}}`",
       "embed-nick": "•\u2000Apelido:`{{data}}`",
-      "embed-status": "•\u2000Status: `{{data}}`",
       "embed-custom_status": "•\u2000Status customizado: `{{data}}`",
       "embed-field-date": "<:Seta:617359896379392003> Datas",
-      "embed-created": "•\u2000Criação da conta: `{{data}}`",
-      "embed-joined": "•\u2000Entrou no servidor: `{{data}}`",
+      "embed-created": "•\u2000Criação da conta: {{data}}",
+      "embed-joined": "•\u2000Entrou no servidor: {{data}}",
       "embed-boost": "•\u2000Impulsionador (deste servidor): `{{data}}`",
       "embed-field-extra": "<:Seta:617359896379392003> Extra",
-      "embed-highest": "•\u2000Cargo mais alto: `{{data}}`"
+      "embed-highest": "•\u2000Cargo mais alto: {{data}}"
     }
   },
   "owner": {
@@ -154,8 +188,8 @@
     "steam": {
       "description": "Pesquise e veja as informações de qualquer jogo da Steam",
       "arguments": {
-        "start": "Digite o nome do jogo desejado",
-        "retry": "Você não digitou o nome do jogo"
+        "start": "digite o nome do jogo desejado",
+        "retry": "você não digitou o nome do jogo"
       },
       "gameNotFound": "Não foi possível encontrar algum jogo com este nome!",
       "unsuccessfully": "Não foi possível pegar as informações deste jogo, tente novamente mais tarde!",
@@ -189,8 +223,8 @@
     "myanimelist": {
       "description": "Veja as informações de um anime",
       "arguments": {
-        "start": "Digite o nome do anime que deseja pesquisar",
-        "retry": "Você não digitou o nome do anime"
+        "start": "digite o nome do anime que deseja pesquisar",
+        "retry": "você não digitou o nome do anime"
       },
       "embed": {
         "aired": "Exibido",
@@ -227,16 +261,16 @@
       "description": "Veja uma imagem com algumas informações da música",
       "userBot": "Não é possível _bots_ utilizarem o Spotify!",
       "noListeningSpotify": "{{name}} não esta escutando uma música do Spotify!",
-      "author": "você",
-      "another": "este usuário"
+      "author": "Você",
+      "another": "Este usuário"
     },
     "translate": {
       "description": "Traduza algo para qualquer linguagem",
       "arguments": {
-        "toStart": "Digite para qual idioma que deseja traduzir o texto",
-        "toRetry": "Você não digitou o idioma",
-        "textStart": "Digite o texto para traduzir",
-        "textRetry": "Você não digitou o texto"
+        "toStart": "digite para qual idioma que deseja traduzir o texto",
+        "toRetry": "você não digitou o idioma",
+        "textStart": "digite o texto para traduzir",
+        "textRetry": "você não digitou o texto"
       },
       "textLen": "Seu texto não pode ter mais de `1020` caracteres!",
       "translateError": "Verifique o idioma digitado, utilize a forma simplificada `english` -> `en`!",

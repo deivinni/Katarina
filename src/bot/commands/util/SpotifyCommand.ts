@@ -69,7 +69,7 @@ export default class SpotifyCommand extends Command {
     // draw song name
     ctx.fillStyle = '#FFFFFF';
     ctx.font = 'bold 28px Arial';
-    await Util.renderEmoji(ctx, shortenerText(presence.details, 30), 160, 35);
+    await Util.renderEmoji(ctx, shortenerText(presence.details, 23), 160, 35);
 
     // draw artist name
     ctx.fillStyle = '#F1F1F1';
@@ -86,7 +86,7 @@ export default class SpotifyCommand extends Command {
     // ending point
     ctx.fillStyle = '#B3B3B3';
     ctx.font = '14px Arial';
-    await Util.renderEmoji(ctx, ending, 430, 140);
+    await Util.renderEmoji(ctx, ending, 438, 140);
 
     // progress
     ctx.fillStyle = '#B3B3B3';
