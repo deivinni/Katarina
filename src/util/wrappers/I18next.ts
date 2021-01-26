@@ -13,7 +13,7 @@ export class I18next {
     this.client = client;
   }
 
-  public t(key: string, options?: Record<string, unknown>): string | string[] {
+  public t(key: string, options?: Record<string, unknown>): string {
     const language = this.language();
 
     return language(key, options);

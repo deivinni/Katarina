@@ -185,6 +185,37 @@
     "eval": "Um terminal no Discord ¯\\_(ツ)_/¯"
   },
   "search": {
+    "myanimelist": {
+      "description": "Veja as informações de um anime",
+      "arguments": {
+        "start": "digite o nome do anime que deseja pesquisar",
+        "retry": "você não digitou o nome do anime"
+      },
+      "embed": {
+        "aired": "Exibido",
+        "rating": "Classificação Indicativa",
+        "genres": "Gêneros",
+        "episodes": "Episódios",
+        "score": "Score",
+        "status": "Status"
+      },
+      "status": {
+        "Currently-Airing": "Em lançamento",
+        "Publishing": "Em lançamento",
+        "Finished-Airing": "Finalizado",
+        "Finished": "Finalizado",
+        "Not-Yet-Aired": "Ainda não foi lançado",
+        "Not-Yet-Published": "Ainda não foi publicado"
+      },
+      "rating": {
+        "G---All-Ages": "Livre",
+        "PG---Children": "Acima dos 10 anos",
+        "PG-13---Teens-13-or-older": "Acima dos 12 anos",
+        "R---17+-(violence-&-profanity)": "Acima dos 14 anos",
+        "R+---Mild-Nudity": "Acima dos 16 anos",
+        "Rx---Hentai": "Acima dos 18 anos"
+      }
+    },
     "steam": {
       "description": "Pesquise e veja as informações de qualquer jogo da Steam",
       "arguments": {
@@ -220,35 +251,30 @@
         }
       }
     },
-    "myanimelist": {
-      "description": "Veja as informações de um anime",
+    "weather": {
+      "description": "Veja a previsão do tempo de qualquer cidade!",
       "arguments": {
-        "start": "digite o nome do anime que deseja pesquisar",
-        "retry": "você não digitou o nome do anime"
+        "start": "digite uma cidade para mostrar sua previsão",
+        "retry": "você não digitou uma cidade"
       },
+      "error": "Ocorreu um erro inesperado procurando por esta cidade, tente novamente mais tarde!",
+      "noResponse": "Não consegui encontrar nenhuma cidade com este nome!",
       "embed": {
-        "aired": "Exibido",
-        "rating": "Classificação Indicativa",
-        "genres": "Gêneros",
-        "episodes": "Episódios",
-        "score": "Score",
-        "status": "Status"
-      },
-      "status": {
-        "Currently-Airing": "Em lançamento",
-        "Publishing": "Em lançamento",
-        "Finished-Airing": "Finalizado",
-        "Finished": "Finalizado",
-        "Not-Yet-Aired": "Ainda não foi lançado",
-        "Not-Yet-Published": "Ainda não foi publicado"
-      },
-      "rating": {
-        "G---All-Ages": "Livre",
-        "PG---Children": "Acima dos 10 anos",
-        "PG-13---Teens-13-or-older": "Acima dos 12 anos",
-        "R---17+-(violence-&-profanity)": "Acima dos 14 anos",
-        "R+---Mild-Nudity": "Acima dos 16 anos",
-        "Rx---Hentai": "Acima dos 18 anos"
+        "title": "Previsão do tempo de {{city}}",
+        "description": {
+          "city": "Cidade: {{name}}",
+          "coordinates": "Coordenadas: {{lat}}, {{long}}",
+          "timezone": "Fuso horário: {{tz}} UTC",
+          "temperature": "Temperatura: ~{{temp}}°C",
+          "feelslike": "Sensação térmica: {{fl}}°",
+          "observationtime": "Horário: {{ot}}",
+          "winddisplay": "Ventos: {{winddisplay}}",
+          "humidity": "Umidade do ar: {{humidity}}%"
+        },
+        "field": {
+          "temperature": "Temperatura: mín. {{low}}° C / máx. {{high}}° C",
+          "climate": "Clima: {{climate}}"
+        }
       }
     }
   },
