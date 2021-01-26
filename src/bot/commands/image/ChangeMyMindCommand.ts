@@ -27,7 +27,7 @@ export default class ChangeMyMindCommand extends Command {
         },
       ],
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

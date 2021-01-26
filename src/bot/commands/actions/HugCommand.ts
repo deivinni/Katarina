@@ -24,7 +24,7 @@ export default class HugCommand extends Command {
         },
       }],
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

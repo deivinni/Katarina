@@ -14,7 +14,7 @@ export default class DicksizeCommand extends Command {
         examples: ['dicksize'],
       },
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

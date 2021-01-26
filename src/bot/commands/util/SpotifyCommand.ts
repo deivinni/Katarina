@@ -24,7 +24,7 @@ export default class SpotifyCommand extends Command {
         },
       ],
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

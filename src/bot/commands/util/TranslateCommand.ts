@@ -33,7 +33,7 @@ export default class TranslateCommand extends Command {
       }],
       ratelimit: 3,
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

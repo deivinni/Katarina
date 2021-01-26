@@ -29,7 +29,7 @@ export default class WeatherCommand extends Command {
         flag: ['-week', '-semana'],
       }],
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

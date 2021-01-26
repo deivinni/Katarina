@@ -28,7 +28,7 @@ export default class SlapCommand extends Command {
         match: 'phrase',
       }],
       userPermissions: ['SEND_MESSAGES'],
-      clientPermissions: ['SEND_MESSAGES'],
+      clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

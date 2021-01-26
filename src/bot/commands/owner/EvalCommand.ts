@@ -32,7 +32,7 @@ export default class EvalCommand extends Command {
       }],
       ratelimit: 5,
       clientPermissions: ['SEND_MESSAGES'],
-      userPermissions: ['SEND_MESSAGES'],
+      userPermissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
     });
   }
 

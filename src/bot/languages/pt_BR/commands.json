@@ -283,6 +283,32 @@
       "description": "Veja o avatar de algum usuário",
       "embed": "[Avatar]({{avatar}}) de {{member}}"
     },
+    "math": {
+      "description": "Faça qualquer calculo matemático no Discord",
+      "arguments": {
+        "start": "digite sua expressão matemática para ser calculada",
+        "retry": "você não digitou a expressão matemática"
+      },
+      "message": "Resultado de sua expressão: `{{result}}`",
+      "unsuccessfully": "Não foi possível resolver está conta, tente novamente mais tarde!"
+    },
+    "qr": {
+      "description": "Transforme qualquer mensagem sua em QRCode",
+      "arguments": {
+        "start": "digite o texto em que quira transformar em qrcode",
+        "retry": "você não digitou o texto"
+      },
+      "unsuccessfully": "ocorreu um erro inesperado, tente novamente mais tarde!"
+    },
+    "shorturl": {
+      "description": "Encurte qualquer link da Internet",
+      "arguments": {
+        "start": "digite o link que você deseja encurtar",
+        "retry": "você não digitou o link"
+      },
+      "unsuccessfully": "Por favor, digite um link válido, verifique-o e tente novamente!",
+      "message": "Aqui está seu link **<{{data}}>**, agora é só compartilhar com os amigos!"
+    },
     "spotify": {
       "description": "Veja uma imagem com algumas informações da música",
       "userBot": "Não é possível _bots_ utilizarem o Spotify!",

@@ -37,12 +37,14 @@
     "i18next-fs-backend": "^1.0.7",
     "intl": "^1.2.5",
     "mal-scraper": "^2.11.2",
+    "mathjs": "^9.0.0",
     "node-canvas-with-twemoji-and-discord-emoji": "^1.1.8",
     "path": "^0.12.7",
     "vultrex.haste": "^1.0.1",
     "weather-js": "^2.0.0"
   },
   "devDependencies": {
+    "@types/mathjs": "^6.0.11",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "eslint": "^7.13.0",
