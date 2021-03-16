@@ -34,7 +34,7 @@ export default class SpotifyCommand extends Command {
     if (!user.presence.activities.find((status: Activity) => status.type === 'LISTENING' && status.name === 'Spotify')) {
       return message.quote(
         this.client.i18n.t('commands:util.spotify.noListeningSpotify', {
-          name: user.id === message.author.id ? this.client.i18n.t('commands:util.spotify.author') : this.client.i18n.t('commands:util.spotify.another'),
+          name: this.client.i18n.t(`commands:util.spotify.${user.id === message.author.id ? 'author' : 'another'}`)
         }),
       );
     }
