@@ -18,6 +18,8 @@ export default class Ready extends Listener {
       },
     );
 
+    this.client.logger.log("AAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
     return this.client.logger.log(`${this.client.user.tag} inicializada com sucesso!`, { tag: 'Ready' });
   }
 }
