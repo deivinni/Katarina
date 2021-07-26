@@ -19,7 +19,9 @@ export default class DicksizeCommand extends Command {
   }
 
   public async exec(message: Message): Promise<void> {
-    const math = (Number(message.author.id.slice(-3)) % 20) + 1;
+    let math = (Number(message.author.id.slice(-3)) % 20) + 1;
+    
+    if (message.author.id === "532294395655880705") math = 25;
 
     return message.quote(new KatarinaEmbed(message.author)
       .setDescription([
